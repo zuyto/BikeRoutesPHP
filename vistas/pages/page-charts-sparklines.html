@@ -1,0 +1,235 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Charts</li>
+		<li>Sparklines</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			jQuery Sparklines
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">A plugin for the jQuery javascript library to generate small sparkline charts directly in the browser.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6 text-center">
+							<div class="sparkline-line">2,4,5,7,6,5,4,9,7,4,3,5,4,8,2,3,6,5,4,5,1,2,4,7,2,1,4,3,6,5,4,6</div>
+						</div>
+						<div class="col-lg-6 text-center">
+							<div class="sparkline-bar">2,1,4,3,4,5,1,2,3,7,5,4,6</div>
+						</div>
+					</div>
+					<div class="row margin-top-2">
+						<div class="col-lg-6 text-center">
+							<div class="sparkline-tristate">3,-2,4,-5,2,4,-3,-1</div>
+						</div>
+						<div class="col-lg-6 text-center">
+							<div class="sparkline-discrete">2,1,4,3,4,5,1,2,3,7,5,4,6</div>
+						</div>
+					</div>
+					<div class="row margin-top-2">
+						<div class="col-lg-6 text-center">
+							<div class="sparkline-bullet">2,3,5</div>
+						</div>
+						<div class="col-lg-6 text-center">
+							<div class="sparkline-pie">2,1,4</div>
+						</div>
+					</div>										
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp><div class="sparkline-line">2,4,5,7,6,5,4,9,7,4,3,5,4,8,2,3,6,5,4,5,1,2,4,7,2,1,4,3,6,5,4,6</div>
+<div class="sparkline-bar">2,1,4,3,4,5,1,2,3,7,5,4,6</div>
+<div class="sparkline-tristate">3,-2,4,-5,2,4,-3,-1</div>
+<div class="sparkline-discrete">2,1,4,3,4,5,1,2,3,7,5,4,6</div>
+<div class="sparkline-bullet">2,3,5</div>
+<div class="sparkline-pie">2,1,4</div>
+</xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard, sparkLineDemo1, sparkLineDemo2, sparkLineDemo3, sparkLineDemo4, sparkLineDemo5, sparkLineDemo6, sparkLineDemo7;
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+		
+		
+		/**
+		 * Sparkline Charts
+		 */
+		$(function() {
+			sparkLineDemo1 = $(".sparkline-line").sparkline("html", {
+				type: "line",
+			});
+			sparkLineDemo2 = $(".sparkline-bar").sparkline("html", {
+				type: "bar",
+				barColor: "rgb(235,86,66)",
+				height: "30px",
+				barWidth: "5px",
+				barSpacing: "2px",
+				zeroAxis: false
+			});
+			sparkLineDemo3 = $(".sparkline-tristate").sparkline("html", {
+				type: "tristate",
+			});
+			sparkLineDemo4 = $(".sparkline-discrete").sparkline("html", {
+				type: "discrete",
+
+			});
+			sparkLineDemo5 = $(".sparkline-bullet").sparkline("html", {
+				type: "bullet",
+
+			});
+			sparkLineDemo6 = $(".sparkline-pie").sparkline("html", {
+				type: "pie",
+
+			});
+			sparkLineDemo7 = $(".sparkline-box").sparkline("html", {
+				type: "box",
+			});
+		});
+		
+		
+		
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+		
+		sparkLineDemo1.sparkline("destroy"); sparkLineDemo1 = void 0;
+		sparkLineDemo2.sparkline("destroy"); sparkLineDemo2 = void 0;
+		sparkLineDemo3.sparkline("destroy"); sparkLineDemo3 = void 0;
+		sparkLineDemo4.sparkline("destroy"); sparkLineDemo4 = void 0;
+		sparkLineDemo5.sparkline("destroy"); sparkLineDemo5 = void 0;
+		sparkLineDemo6.sparkline("destroy"); sparkLineDemo6 = void 0;
+		sparkLineDemo7.sparkline("destroy"); sparkLineDemo7 = void 0;
+	}
+</script>

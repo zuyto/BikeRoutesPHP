@@ -1,0 +1,247 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Bemat Admin</li>
+		<li>Components</li>
+		<li>Notifications</li>
+		<li>Toasts</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Toasts
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="alert alert-callout alert-info alert-exclusive">
+				<span class="badge badge-default-dark"><i class="material-icons md-18">star</i></span>  Bemat Admin Exclusive Premium Plugin
+			</div>
+			<p class="lead">
+				Toast are primarily used for system messaging. Toasts are similar to snackbars but do not contain actions and cannot be swiped off screen.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Initializing</h2>
+			<p>For performance reasons, the Toasts are opt-in, meaning you must initialize them yourself.</p>
+			<pre><xmp>$(function () {
+$.toasts({
+oneAtTime: false, // Optional Value
+});
+});</xmp></pre>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6">
+							<p>
+								<label>
+									<input id="demoToastRadio1" class="radio radio-primary" value="top" type="radio" name="demoToast1" checked/>
+									<span>Top</span>
+								</label>
+							</p>
+							<p>
+								<label>
+									<input id="demoToastRadio2" class="radio radio-primary" value="bottom" type="radio" name="demoToast1"/>
+									<span>Bottom</span>
+								</label>
+							</p>
+						</div>
+						<div class="col-lg-6">
+							<p>
+								<label>
+									<input id="demoToastRadio3" class="radio radio-primary" value="left" type="radio" name="demoToast2"/>
+									<span>Left</span>
+								</label>
+							</p>
+							<p>
+								<label>
+									<input id="demoToastRadio4" class="radio radio-primary" value="right" type="radio" name="demoToast2" checked/>
+									<span>Right</span>
+								</label>
+							</p>
+						</div>
+						<div class="col-lg-12 text-center">
+							<button id="btntest-toast1" class="btn btn-default btn-raised" type="button">Show Simple Toast</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						JAVASCRIPT Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+				<pre><xmp>$("#btntest-toast1").on("click",function(){
+$.toasts("add",{
+msg: 		"This is a Demo Toast",
+});
+});</xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+		"Checkbox"
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Toasts Plugin
+		 */
+
+		$("#btntest-toast1").on("click",function(){
+			$.toasts("add",{
+				msg: 		"This is a Demo Toast",
+			});
+		});
+
+		$("#demoToastRadio1").on("ifChecked",function(){
+			var r1 = $('[name="demoToast1"]:checked').val(),
+				r2 = $('[name="demoToast2"]:checked').val(),
+				pos = r1 +" "+ r2;
+			$.toasts("position",pos);
+		});
+		$("#demoToastRadio2").on("ifChecked",function(){
+			var r1 = $('[name="demoToast1"]:checked').val(),
+				r2 = $('[name="demoToast2"]:checked').val(),
+				pos = r1 +" "+ r2;
+			$.toasts("position",pos);
+		});
+		$("#demoToastRadio3").on("ifChecked",function(){
+			var r1 = $('[name="demoToast1"]:checked').val(),
+				r2 = $('[name="demoToast2"]:checked').val(),
+				pos = r1 +" "+ r2;
+			$.toasts("position",pos);
+		});
+				$("#demoToastRadio4").on("ifChecked",function(){
+			var r1 = $('[name="demoToast1"]:checked').val(),
+				r2 = $('[name="demoToast2"]:checked').val(),
+				pos = r1 +" "+ r2;
+			$.toasts("position",pos);
+		});
+		
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

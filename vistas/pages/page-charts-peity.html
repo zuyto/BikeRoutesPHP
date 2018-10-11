@@ -1,0 +1,210 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Charts</li>
+		<li>Peity</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Peity
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Overview</h2>
+			<p>Peity is a simple jQuery plugin that converts an element's content into a simple <code>&lt;svg&gt;</code> mini pie, donut, line or bar chart and is compatible with any browser that supports <code>&lt;svg&gt;</code>.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6 text-center">
+							<div class="peity-line">5,3,9,6,5,9,7,3,5,8</div>
+						</div>
+						<div class="col-lg-6 text-center">
+							<div class="peity-bar">4,3,5,2,5,3,8,3,4,9</div>
+						</div>
+					</div>
+					<div class="row margin-top-2">
+						<div class="col-lg-6 text-center">
+							<div class="peity-donut">3,2,4</div>
+						</div>
+						<div class="col-lg-6 text-center">
+							<div class="peity-pie">2,1,4</div>
+						</div>
+					</div>										
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp><div class="peity-line">5,3,9,6,5,9,7,3,5,8</div>
+<div class="peity-bar">4,3,5,2,5,3,8,3,4,9</div>
+<div class="peity-donut">3,2,4</div>
+<div class="peity-pie">2,1,4</div>
+</xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard, peityDemo1,peityDemo2,peityDemo3,peityDemo4;
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+		
+		
+		/**
+		 * Peity
+		 */
+		$(function($) {
+			peityDemo1 = $(".peity-line").peity("line",{
+				height: 28,
+				width: 64
+			});
+			peityDemo2 = $(".peity-bar").peity("bar",{
+				height: 28,
+				width: 64
+			});
+			peityDemo3 = $(".peity-donut").peity("donut",{
+				height: 28,
+				width: 64
+			});
+			peityDemo4 = $(".peity-pie").peity("pie",{
+				height: 28,
+				width: 64
+			});
+		});
+		
+		
+		
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+		
+		peityDemo1.off().remove(); peityDemo1 = void 0;
+		peityDemo2.off().remove(); peityDemo2 = void 0;
+		peityDemo3.off().remove(); peityDemo3 = void 0;
+		peityDemo4.off().remove(); peityDemo4 = void 0;
+	}
+</script>

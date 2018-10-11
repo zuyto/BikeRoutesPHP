@@ -1,0 +1,301 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Components</li>
+		<li>Syntax Highlighter</li>
+		<li>Google Prettify</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Google Prettify
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				An embeddable script that makes source-code snippets in HTML prettier.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Basic Example</h2>
+
+			<div class="panel panel-default">
+				<div class="panel-body">
+<pre class="prettyprint"><xmp>class Voila {
+public:
+  // Voila
+  static const string VOILA = "Voila";
+
+  // will not interfere with embedded <a href="#voila2">tags</a>.
+}</xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Prettify Color Themes</h2>
+			<p>Bemat Admin comes with 30+ Prettify color themes to make your code snippets more beautiful.</p>
+
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Available Color Themes
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body no-padding">
+					<div class="padding-horizontal-2">
+						<span class="label label-primary">Note:</span> This setting can be adjusted inside <span class="label label-primary-dark">bemat-config.js</span> file.
+					</div>
+
+					<div class="table-responsive">
+						<table class="table table-condensed table-striped margin-top-2">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Color Theme Code</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b><i>Atelier Cave Dark</i></b></td>
+									<td><code>atelier-cave-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Cave Light</i></b></td>
+									<td><code>atelier-cave-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Dune Dark</i></b></td>
+									<td><code>atelier-dune-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Dune Light</i></b></td>
+									<td><code>atelier-dune-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Estuary Dark</i></b></td>
+									<td><code>atelier-estuary-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Estuary Light</i></b></td>
+									<td><code>atelier-estuary-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Forest Dark</i></b></td>
+									<td><code>atelier-forest-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Forest Light</i></b></td>
+									<td><code>atelier-forest-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Heath Dark</i></b></td>
+									<td><code>atelier-heath-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Heath Light</i></b></td>
+									<td><code>atelier-heath-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Lakeside Dark</i></b></td>
+									<td><code>atelier-lakeside-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Lakeside Light</i></b></td>
+									<td><code>atelier-lakeside-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Plateau Dark</i></b></td>
+									<td><code>atelier-plateau-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Plateau Light</i></b></td>
+									<td><code>atelier-plateau-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Savanna Dark</i></b></td>
+									<td><code>atelier-savanna-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Savanna Light</i></b></td>
+									<td><code>atelier-savanna-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Seaside Dark</i></b></td>
+									<td><code>atelier-seaside-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Seaside Light</i></b></td>
+									<td><code>atelier-seaside-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Sulphurpool Dark</i></b></td>
+									<td><code>atelier-sulphurpool-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Atelier Sulphurpool Light</i></b></td>
+									<td><code>atelier-sulphurpool-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Github</i></b></td>
+									<td><code>github</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Hemisu Dark</i></b></td>
+									<td><code>hemisu-dark</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Hemisu Light</i></b></td>
+									<td><code>hemisu-light</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Monokai</i></b></td>
+									<td><code>monokai</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Tomorrow Night Blue</i></b></td>
+									<td><code>tomorrow-night-blue</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Tomorrow Night Bright</i></b></td>
+									<td><code>tomorrow-night-bright</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Tomorrow Night Eighties</i></b></td>
+									<td><code>tomorrow-night-eighties</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Tomorrow Night</i></b></td>
+									<td><code>tomorrow-night</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Tomorrow</i></b></td>
+									<td><code>tomorrow</code></td>
+								</tr>
+								<tr>
+									<td><b><i>Vibrant Ink</i></b></td>
+									<td><code>vibrant-ink</code></td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /.table-responsive -->				
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Prettyprint
+		 */
+		
+		prettyPrint();
+
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+	
+	}
+</script>

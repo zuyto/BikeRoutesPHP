@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CKEditor Skin Sample</title>
+	<script src="../vendor/ckeditor/ckeditor.js"></script></head>
+<body>
+<script>
+
+	var config = {
+		height: 100,
+		removePlugins: 'image,maximize,table,tabletools'
+	};
+
+	if ( window.parent.CKEDITOR.config.filebrowserBrowseUrl ) {
+		var properties = {
+			filebrowserBrowseUrl : 1,
+			filebrowserImageBrowseUrl : 1,
+			filebrowserFlashBrowseUrl : 1,
+			filebrowserUploadUrl : 1,
+			filebrowserImageUploadUrl : 1,
+			filebrowserFlashUploadUrl : 1
+		};
+		for ( var p in properties) {
+			config[p] = window.parent.CKEDITOR.config[p];
+		}
+	}
+	config.skin = 'icy_orange';
+
+	CKEDITOR.appendTo( document.body, config );
+
+</script>
+</body>
+</html>

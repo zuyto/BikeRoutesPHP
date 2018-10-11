@@ -1,0 +1,158 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Components</li>
+		<li>Code Editors</li>
+		<li>Ace</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Ace Editor
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				Ace is an embeddable code editor written in JavaScript. It matches the features and performance of native editors such as Sublime, Vim and TextMate. It can be easily embedded in any web page and JavaScript application.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Basic Example</h2>
+
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div id="aceEditor-demo" class="height-6">
+/**
+ * In fact, you're looking at ACE right now. Go ahead and play with it!
+ *
+ * We are currently showing off the JavaScript mode. ACE has support for 45
+ * language modes and 24 color themes!
+ */
+
+function add(x, y) {
+    var resultString = "Hello, ACE! The result of your math is: ";
+    var result = x + y;
+    return resultString + result;
+}
+
+var addResult = add(3, 2);
+console.log(addResult);
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var aceEditor;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Ace Editor
+		 */
+		aceEditor = ace.edit("aceEditor-demo");
+		aceEditor.setTheme("ace/theme/monokai");
+		aceEditor.getSession().setMode("ace/mode/javascript");
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		aceEditor.destroy();
+		aceEditor.container.remove();
+	}
+</script>

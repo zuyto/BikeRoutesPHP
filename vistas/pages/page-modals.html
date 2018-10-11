@@ -1,0 +1,222 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Components</li>
+		<li>Modals</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Modals
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				Dialogs contain text and UI controls focused on a specific task. They inform users about critical information, require users to make decisions, or involve multiple tasks.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary"></h2>
+			<p></p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-3">
+							<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal1">Modal 1</button>
+						</div>
+						<div class="col-lg-3">
+							<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal2">Modal 2</button>
+						</div>
+						<div class="col-lg-3">
+							<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal1">Modal 3</button>
+						</div>
+						<div class="col-lg-3">
+							<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal2">Modal 4</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp><button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal1">Modal 1</button>
+<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal2">Modal 2</button>
+<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal1">Modal 3</button>
+<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal2">Modal 4</button></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</section><!-- /#page-content -->
+
+
+
+<!-- Modal HTML -->
+<div id="demoModal1" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Use Bemat's Admin location service?</h4>
+			</div>
+			<div class="modal-body">
+				<p>Let Bemat Admin determine location. This means sending anonymous location data to Bemat Admin, even when no apps are running.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Disagree</button>
+				<button type="button" class="btn btn-primary btn-flat btn-ripple">Agree</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal HTML -->
+<div id="demoModal2" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">This is an alert title</h4>
+			</div>
+			<div class="modal-body">
+				<p>You can specify some description text in here.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">Got it!</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+		"Modals"
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

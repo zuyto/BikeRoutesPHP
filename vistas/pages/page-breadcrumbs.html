@@ -1,0 +1,176 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Components</li>
+		<li>Breadcrumbs</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Breadcrumbs
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				Breadcrumbs are a great way to show hierarchy-based information for a site. In the case of blogs, breadcrumbs can show the dates of publishing, categories, or tags. They indicate the current page's location within a navigational hierarchy.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Structure</h2>
+			<p>Separators are automatically added in CSS through <code>:before</code> and <code>content.</code></p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<ol class="breadcrumb">
+						<li><a href="#">Admin</a></li>
+						<li><a href="#">Dashboard</a></li>
+						<li><a href="#">Components</a></li>
+						<li>Breadcrumbs</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp><ol class="breadcrumb">
+<li><a href="#">Admin</a></li>
+<li><a href="#">Dashboard</a></li>
+<li><a href="#">Components</a></li>
+<li>Breadcrumbs</li>
+</ol></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

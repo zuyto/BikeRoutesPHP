@@ -1,0 +1,174 @@
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="text-center">
+					<h2 class="no-margin padding-vertical-2"><span class="text-primary">BEMAT</span> Helper Functions</h2>
+					<p>Bemat extends jQuery to make your development easier.</p>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<div class="row">
+	
+		<div class="col-xs-12">
+            <div class="panel panel-default">
+				<div class="panel-heading">
+					<header>
+						Helper Functions
+					</header>
+				</div><!-- /.panel-heading -->
+                <div class="panel-body no-padding">
+					<div class="table-responsive">
+						<table class="table table-condensed table-striped margin-top-2">
+							<thead>
+								<tr>
+									<th>Function</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b><i>uniqId();</i></b></td>
+									<td>This function return a rand unique numbre id.</td>
+								</tr>
+								<tr>
+									<td><b><i>rand(min,max);</i></b></td>
+									<td>This is a javascript clone of the rand php function.</td>
+								</tr>
+								<tr>
+									<td><b><i>typeOf(element)</i></b></td>
+									<td>This function return the "type of" an element, variable, function or object.</td>
+								</tr>
+								<tr>
+									<td><b><i>$(element).toggleText(first text,second text);</i></b></td>
+									<td>This function changes the text of an element on click event, from first text to second text and back.</td>
+								</tr>
+								<tr>
+									<td><b><i>$(element).exists();</i></b></td>
+									<td>This function return true if the element exists. Not chainable.</td>
+								</tr>
+								<tr>
+									<td><b><i>$(element).animateCss(animation name,callback);</i></b></td>
+									<td>This function returns the <code>callback</code> when animate.css animation ends.</td>
+								</tr>
+								<tr>
+									<td><b><i>$(element).addAnimatedClass(class,callback);</i></b></td>
+									<td>This function lets you add a class to an element and do the <code>callback</code> when the class transition ends.</td>
+								</tr>
+								<tr>
+									<td><b><i>$(element).removeAnimatedClass(class,callback);</i></b></td>
+									<td>This function lets you remove a class of an element and do the <code>callback</code> when the class transition ends.</td>
+								</tr>
+								<tr>
+									<td><b><i>$(element).onCSSAnimationEnd(callback);</i></b></td>
+									<td>This function listens until the css animation end, then do the <code>callback</code>.</td>
+								</tr>
+								<tr>
+									<td><b><i>$(element).onCSSTransitionEnd(callback);</i></b></td>
+									<td>This function listens until the css transition end, then do the <code>callback</code>.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /.table-responsive -->
+                </div><!-- /.panel-body -->
+            </div>
+        </div>
+	</div>
+</section><!-- /#page-content -->
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+		"Scrollbar"
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	
+	var doneScriptsLoad = function(){
+
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+
+	}
+</script>

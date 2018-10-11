@@ -1,0 +1,206 @@
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="text-center">
+					<h2 class="no-margin padding-vertical-2"><span class="text-primary">BEMAT</span> Layout Options</h2>
+					<p>Transform Bemat Admin to fit your needs, do what you want, it's on your hands!</p>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <h3 class="no-margin">
+						Layout type <strong>"Basic Left Side Navigation"</strong>
+					</h3>
+					<small>(main layout)</small>
+                    <h5 class="no-margin">Available configure options</h5>
+					<div class="no-padding">
+						<span class="label label-default">Collapse Menu</span>
+						<span class="label label-default">Boxed Layout</span>
+						<span class="label label-default">Scroll Footer</span>
+						<span class="label label-default">Fixed Footer</span>
+					</div>
+                    <div class="margin-top-4">
+						<img class="img-responsive" src="img/dashboard.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <h3 class="no-margin">
+						Layout type <strong>"Minified Menu"</strong>
+					</h3>
+					<small>(optional layout)</small>
+                    <h5 class="no-margin">Available configure options</h5>
+					<div class="no-padding">
+						<span class="label label-default">Collapse Menu</span>
+						<span class="label label-default">Boxed Layout</span>
+						<span class="label label-default">Scroll Footer</span>
+						<span class="label label-default">Fixed Footer</span>
+					</div>
+                    <div class="margin-top-4">
+						<img class="img-responsive" src="img/dashboard.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <h3 class="no-margin">
+						Layout type <strong>"Off Canvas Menu"</strong>
+					</h3>
+					<small>(optional layout)</small>
+                    <h5 class="no-margin">Available configure options</h5>
+					<div class="no-padding">
+						<span class="label label-default">Collapse Menu</span>
+						<span class="label label-default">Boxed Layout</span>
+						<span class="label label-default">Scroll Footer</span>
+						<span class="label label-default">Fixed Footer</span>
+					</div>
+                    <div class="margin-top-4">
+						<img class="img-responsive" src="img/dashboard.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>		
+		
+		<div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-body text-center">
+                    <h3 class="no-margin">
+						Layout type <strong>"Full Height App"</strong>
+					</h3>
+					<small>(optional layout)</small>
+                    <h5 class="no-margin">Available configure options</h5>
+					<div class="no-padding">
+						<span class="label label-default">Collapse Menu</span>
+						<span class="label label-default">Boxed Layout</span>
+						<span class="label label-default">Scroll Footer</span>
+						<span class="label label-default">Fixed Footer</span>
+					</div>
+                    <div class="margin-top-4">
+						<img class="img-responsive" src="img/dashboard.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+</section><!-- /#page-content -->
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

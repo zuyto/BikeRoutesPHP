@@ -1,0 +1,182 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Components</li>
+		<li>Editors</li>
+		<li>Trumbowyg</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Trumbowyg
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				A lightweight WYSIWYG editor
+				<br />
+				Trumbowyg is a light, translatable and customisable jQuery plugin.
+				<br />
+				Beautiful design, generates semantic code, comes with a powerful API.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Basic Example</h2>
+			<p>This the minimal code to transform a simple textarea into the amazing WYSIWYG editor which is Trumbowyg.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h4>Examples:</h4>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<textarea id="trumbowyg-demo" name="content" class="height-6" data-provide="markdown" rows="10" placeholder="Enter text here">
+						<h1>Trumbowyg Editor Demo</h1>
+						<p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. <b>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis</b>. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. </p>
+						<h2>Lorem ipsum dolor sit amet</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. <b>Fusce nec tellus sed augue semper porta</b>. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. </p>
+					</textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var trumbowyg;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Trumbowyg Editor
+		 */
+		if ($.trumbowyg) {
+		
+			var fullOptions = {
+				btnsDef: {
+					// Customizables dropdowns
+					image: {
+						dropdown: ['insertImage', 'upload', 'base64'],
+						ico: 'insertImage'
+					},
+					linkImproved: {
+						dropdown: ['createLink', 'editLink', 'unlink'],
+						ico: 'link'
+					}
+				},
+				btns: ['viewHTML',
+					'|', 'formatting',
+					'|', 'btnGrp-design',
+					'|', 'linkImproved',
+					'|', 'image',
+					'|', 'btnGrp-justify',
+					'|', 'btnGrp-lists',
+					'|', 'foreColor', 'backColor',
+					'|', 'preformatted',
+					'|', 'horizontalRule']
+			};
+		
+			trumbowyg = $("#trumbowyg-demo").trumbowyg(fullOptions);
+		}
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		$("#trumbowyg-demo").trumbowyg("destroy");
+		trumbowyg.destroy();
+	}
+</script>

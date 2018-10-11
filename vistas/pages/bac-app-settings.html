@@ -1,0 +1,371 @@
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="text-center">
+					<h2 class="no-margin padding-vertical-2"><span class="text-primary">BEMAT</span> App Settings</h2>
+					<p>Config Bemat Admin to fit your application needs. You need html5 pretty links? No problem, Bemat support it!</p>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+            <div class="panel panel-default">
+				<div class="panel-heading">
+					<header>
+						App Settings
+					</header>
+				</div><!-- /.panel-heading -->
+                <div class="panel-body no-padding">
+					<div class="padding-horizontal-2">
+						<span class="label label-primary">Note:</span> These settings can be adjusted inside <span class="label label-primary-dark">bemat-config.js</span> file.
+					</div>
+					
+					<div class="table-responsive">
+						<table class="table table-condensed table-striped margin-top-2">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Type</th>
+									<th>Default</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b><i>$.debug</i></b></td>
+									<td>boolean</td>
+									<td><code>false</code></td>
+									<td>Activates the debug console.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.ajaxNavHtml5Mode</i></b></td>
+									<td>boolean</td>
+									<td><code>false</code></td>
+									<td>Activates the html5Mode to the navigation. <code>true</code> will use pushstate instead of hash based navigation. With this option activated, you must edit your <code>.htaccess</code> file.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.ajaxNavFadeDuration</i></b></td>
+									<td>number</td>
+									<td><code>500</code></td>
+									<td>Sets the fade animation time of the page content.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.ajaxNavMaterialTransition</i></b></td>
+									<td>boolean</td>
+									<td><code>false</code></td>
+									<td>Activates the Material Design page transition. (Experimental)</td>
+								</tr>
+								<tr>
+									<td><b><i>$.appMultiLanguage</i></b></td>
+									<td>boolean</td>
+									<td><code>true</code></td>
+									<td>Activates the multi language system.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.appDefaultLanguage</i></b></td>
+									<td>string</td>
+									<td><code>en</code></td>
+									<td>The code of the locale file used as default.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.sidebarWidth</i></b></td>
+									<td>number</td>
+									<td><code>300</code></td>
+									<td>The width of the sidebar. It must be the same width used in the CSS file to work properly.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.sidebarMenuAutoCollapse</i></b></td>
+									<td>boolean</td>
+									<td><code>false</code></td>
+									<td>Collapses the active open menu when you click on other menu item.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.defaultHomePage</i></b></td>
+									<td>boolean/string</td>
+									<td><code>false</code></td>
+									<td>Sets the default home page to load on app init.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.idle</i></b></td>
+									<td>boolean</td>
+									<td><code>false</code></td>
+									<td>Activates the idle mode timer.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.idleTimeout</i></b></td>
+									<td>number</td>
+									<td><code>3000</code></td>
+									<td>The timeout in miliseconds when the app will be on idle mode.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.ckeditorSkin</i></b></td>
+									<td>string</td>
+									<td><code>lightwire</code></td>
+									<td>Set the default CKEditor Skin.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.prettifyTheme</i></b></td>
+									<td>string</td>
+									<td><code>github</code></td>
+									<td>Set the default Google Prettify Highlight skin.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.gMapsAPIKey</i></b></td>
+									<td>string</td>
+									<td><code>none</code></td>
+									<td>Your Google Maps developer API key.</td>
+								</tr>
+								<tr>
+									<td><b><i>$.appBackgroundImage</i></b></td>
+									<td>string</td>
+									<td><code>binding_dark.png</code></td>
+									<td>The page background image on Bxed Layout.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /.table-responsive -->
+                </div><!-- /.panel-body -->
+            </div>
+        </div>
+		
+		<div class="col-xs-12">
+            <div class="panel panel-default">
+				<div class="panel-heading">
+					<header>
+						Bemat Admin API
+					</header>
+				</div><!-- /.panel-heading -->
+                <div class="panel-body no-padding">
+					<div class="table-responsive">
+						<table class="table table-condensed table-striped margin-top-2">
+							<thead>
+								<tr>
+									<th>Method/function</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b><i>bematadmin.App.loadScript.load();</i></b></td>
+									<td>Use this function to load an external js file.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.system.setUpComponents();</i></b></td>
+									<td>Use this function to reload the basic components.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.navigate.go();</i></b></td>
+									<td>Use this function to go to an url using the Bemat navigation API</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.sidebar.toggle();</i></b></td>
+									<td>Use this function to show or hide the sidebar.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.darkHeaderFull();</i></b></td>
+									<td>Use this function to set to the dark style the full app header.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.darkHeaderBrand();</i></b></td>
+									<td>Use this function to set to the dark style just the header brand box.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.darkHeaderToolbar();</i></b></td>
+									<td>Use this function to set to the dark style just the header toolbar.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.darkSidebar();</i></b></td>
+									<td>Use this function to set to the dark style the sidebar.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.lightHeaderFull();</i></b></td>
+									<td>Use this function to set to the light style the full app header.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.lightHeaderBrand();</i></b></td>
+									<td>Use this function to set to the light style just the header brand box.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.lightHeaderToolbar();</i></b></td>
+									<td>Use this function to set to the light style just the header toolbar.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.lightSidebar();</i></b></td>
+									<td>Use this function to set to the light style the sidebar.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.sidebarCollapsed();</i></b></td>
+									<td>Use this function to collapse the sidebar.</td>
+								</tr>
+								<tr>
+									<td><b><i>bematadmin.App.theme.sidebarNormal();</i></b></td>
+									<td>Use this function to expand the sidebar.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /.table-responsive -->
+                </div><!-- /.panel-body -->
+            </div>
+        </div>
+		
+		
+		<div class="col-xs-12">
+            <div class="panel panel-default">
+				<div class="panel-heading">
+					<header>
+						Bemat Admin Events
+					</header>
+				</div><!-- /.panel-heading -->
+                <div class="panel-body no-padding">
+					<div class="table-responsive">
+						<table class="table table-condensed table-striped margin-top-2">
+							<thead>
+								<tr>
+									<th>Event</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b><i>bemat-screen-resize</i></b></td>
+									<td>This event is fired when the screen is resized.</td>
+								</tr>
+								<tr>
+									<td><b><i>idleOn</i></b></td>
+									<td>This event is fired when the app goes into Idle Mode.</td>
+								</tr>
+								<tr>
+									<td><b><i>idleOff</i></b></td>
+									<td>This event is fired when the app exits the Idle Mode.</td>
+								</tr>
+								<tr>
+									<td><b><i>scriptload</i></b></td>
+									<td>This event is fired when the system scripts are fully loaded.</td>
+								</tr>
+								<tr>
+									<td><b><i>pageload</i></b></td>
+									<td>This event is fired when the new page has been made visible to the user (will wait for CSS transitions to complete).</td>
+								</tr>
+								<tr>
+									<td><b><i>systemload</i></b></td>
+									<td>This event is fired when the whole application is loaded and the splash screen has finished being hidden from the user.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /.table-responsive -->
+                </div><!-- /.panel-body -->
+            </div>
+        </div>
+		
+	</div>
+</section><!-- /#page-content -->
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

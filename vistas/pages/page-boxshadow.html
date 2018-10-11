@@ -1,0 +1,203 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Bemat Admin</li>
+		<li>Components</li>
+		<li>Box Shadow</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Box Shadow
+			<span class="page-header_subtitle">AKA. Material Design Shadows</span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				Objects in material design possess similar qualities to objects in the physical world. In the physical world, objects can be stacked or affixed to one another, but cannot pass through each other. Objects cast shadows and reflect light.
+			</p>								
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Material Design Shadows</h2>
+			<p>Use the <code>.z-depth-X</code> class within your elements to add material design shadow, where <code>X</code> is the elevation index of shadow.</p>
+		</div>
+
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+<div class="row">
+<div class="col-sm-2 text-center">
+<p>Without shadow</p>
+<div class="box-shadow-demo"></div>
+</div>
+<div class="col-sm-2 text-center">
+<p>.z-depth-1</p>
+<div class="box-shadow-demo z-depth-1"></div>
+</div>
+<div class="col-sm-2 text-center">
+<p>.z-depth-2</p>
+<div class="box-shadow-demo z-depth-2"></div>
+</div>
+<div class="col-sm-2 text-center">
+<p>.z-depth-3</p>
+<div class="box-shadow-demo z-depth-3"></div>
+</div>
+<div class="col-sm-2 text-center">
+<p>.z-depth-4</p>
+<div class="box-shadow-demo z-depth-4"></div>
+</div>
+<div class="col-sm-2 text-center">
+<p>.z-depth-5</p>
+<div class="box-shadow-demo z-depth-5"></div>
+</div>
+</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp><p>Without shadow</p>
+<div class="box-shadow-demo"></div>
+<p>.z-depth-1</p>
+<div class="box-shadow-demo z-depth-1"></div>
+<p>.z-depth-2</p>
+<div class="box-shadow-demo z-depth-2"></div>
+<p>.z-depth-3</p>
+<div class="box-shadow-demo z-depth-3"></div>
+<p>.z-depth-4</p>
+<div class="box-shadow-demo z-depth-4"></div>
+<p>.z-depth-5</p>
+<div class="box-shadow-demo z-depth-5"></div>
+</xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

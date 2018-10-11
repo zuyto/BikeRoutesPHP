@@ -1,0 +1,196 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Charts</li>
+		<li>Chartist</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Chartist.js
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Overview</h2>
+			<p>Chartist.js is the product of a community that was disappointed about the abilities provided by other charting libraries.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6">
+			<h4>Examples:</h4>
+			<div class="panel panel-default">
+				<div class="panel-body height-5 no-padding">
+					<div class="ct-chart"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<h4>HTML Code:</h4>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<pre><xmp><div class="ct-chart"></div></xmp></pre>
+				</div>
+			</div>
+			<h4>JAVASCRIPT Code:</h4>
+			<div class="panel panel-default">
+				<div class="panel-body height-2">
+					<pre><xmp>var data = {
+// A labels array that can contain any sort of values
+labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+// Our series array that contains series objects or in this case series data arrays
+series: [
+[5, 2, 4, 2, 6],
+[1, 4, 2, 1, 5],
+]
+};
+
+var options = {
+height: 280
+}
+
+new Chartist.Line('.ct-chart', data, options);</xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+		"SimplePieCharts"
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard, spcTimeout;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+		
+		
+		/**
+		 * Chartist.js
+		 */
+		$(function($) {
+			var data = {
+			// A labels array that can contain any sort of values
+			labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+			// Our series array that contains series objects or in this case series data arrays
+			series: [
+			[5, 2, 4, 2, 6],
+			[1, 4, 2, 1, 5],
+			]
+			};
+
+			var options = {
+			height: 280
+			}
+
+			new Chartist.Line('.ct-chart', data, options);
+		});
+		
+		
+		
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

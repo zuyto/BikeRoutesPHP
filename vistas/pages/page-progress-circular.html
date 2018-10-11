@@ -1,0 +1,406 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Components</li>
+		<li>Progress Indicators</li>
+		<li>Circular Progress</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Circular Progress
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="alert alert-callout alert-info alert-exclusive">
+				 <span class="badge badge-default-dark"><i class="material-icons md-18">star</i></span>  Bemat Admin Exclusive Premium Plugin
+			</div>
+			<p class="lead">
+				Minimize visual changes that occur while your app loads content by representing each operation with a single activity indicator.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Initializing</h2>
+			<p>To work with circular progress, you must initialize the <code>jquery.CircularProgress.js</code> by calling the init method, or using the <code>data-toggle="circular-progress"</code> attribute.</p>
+			<pre><xmp>$(".circular-preloader-demo").circularProgress();</xmp></pre>
+		</div>	
+	</div>
+	
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Determinate</h2>
+			<p>For operations where the percentage of the operation completed can be determined, use a determinate indicator. They give users a quick sense of how long an operation will take.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body demo-center">
+					<div class="circular-preloader-demo circular-preloader-demo-determinate" data-mode="determinate" data-toggle="circular-progress" data-type="primary" data-value="30"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp><div class="circular-preloader-demo circular-preloader-demo-determinate" data-mode="determinate" data-toggle="circular-progress" data-type="primary" data-value="30"></div></xmp></pre>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<h3>How to set the progress?</h3>
+			<p>To set the progress of the circular progress, you must call the <code>set</code> method, by passing a number value from 0 to 100.</p>
+			<pre><xmp>$(".circular-preloader-demo-determinate").circularProgress("set",[0-100]);</xmp></pre>
+		</div>
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="demo-center">
+						<div class="circular-preloader-demo circular-preloader-demo-determinate2" data-mode="determinate" data-toggle="circular-progress" data-type="danger" data-value="82"></div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-4">
+							<button type="button" class="btn btn-raised btn-default-light btn-circular-progress-demo-1">Set Progress to 25%</button>
+						</div>
+						<div class="col-lg-4">
+							<button type="button" class="btn btn-raised btn-default-light btn-circular-progress-demo-2">Set Progress to 73%</button>
+						</div>
+						<div class="col-lg-4">
+							<button type="button" class="btn btn-raised btn-default-light btn-circular-progress-demo-3">Set Progress to 100%</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="panel panel-default">
+						<div class="panel-heading panel-heading-xs">
+							<header>
+								HTML Code:
+							</header>
+							<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+						</div><!-- /.panel-heading -->
+						<div class="panel-body">
+							<pre><xmp><div class="circular-preloader-demo circular-preloader-demo-determinate2" data-toggle="circular-progress" data-mode="determinate" data-type="danger" data-value="82"></div></xmp></pre>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="panel panel-default">
+						<div class="panel-heading panel-heading-xs">
+							<header>
+								JAVASCRIPT Code:
+							</header>
+							<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+						</div><!-- /.panel-heading -->
+						<div class="panel-body">
+							<pre><xmp>$(".btn-circular-progress-demo-1").on("click",function(){
+$(".circular-preloader-demo-determinate2").circularProgress("set",25);
+});
+$(".btn-circular-progress-demo-2").on("click",function(){
+$(".circular-preloader-demo-determinate2").circularProgress("set",73);
+});
+$(".btn-circular-progress-demo-3").on("click",function(){
+$(".circular-preloader-demo-determinate2").circularProgress("set",100);
+});</xmp></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Indeterminate</h2>
+			<p>For operations where the user is asked to wait a moment while something finishes up, and it's not necessary to expose what's happening behind the scenes and how long it will take, use an indeterminate indicator.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body demo-center">
+					<div class="circular-preloader-demo circular-preloader-demo-indeterminate" data-toggle="circular-progress" data-mode="indeterminate" data-type="info"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp><div class="circular-preloader-demo circular-preloader-demo-indeterminate" data-toggle="circular-progress" data-mode="indeterminate" data-type="info" ></div></xmp></pre>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<h3>Controlling the indeterminate circular progress</h3>
+			<p>To control the indeterminate circular progress, you can call some of the four methods below: <code>pause</code>, <code>play</code>, <code>hide</code> or <code>show</code></p>
+			<pre><xmp>$(".circular-preloader-demo-determinate").circularProgress([pause|play|hide|show]);</xmp></pre>
+		</div>
+		<div class="col-lg-12">
+			<p>This circular progress is <code>paused</code> by default, using the <code>data-state</code> attribute <code>pause</code></p>
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="demo-center">
+						<div class="circular-preloader-demo circular-preloader-demo-indeterminate2" data-toggle="circular-progress" data-mode="indeterminate" data-type="success" data-state="pause"></div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3">
+							<button type="button" class="btn btn-raised btn-default-light btn-circular-progress-demo-4">Pause</button>
+						</div>
+						<div class="col-lg-3">
+							<button type="button" class="btn btn-raised btn-default-light btn-circular-progress-demo-5">Play</button>
+						</div>
+						<div class="col-lg-3">
+							<button type="button" class="btn btn-raised btn-default-light btn-circular-progress-demo-6">Hide</button>
+						</div>
+						<div class="col-lg-3">
+							<button type="button" class="btn btn-raised btn-default-light btn-circular-progress-demo-7">Show</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="panel panel-default">
+						<div class="panel-heading panel-heading-xs">
+							<header>
+								HTML Code:
+							</header>
+							<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+						</div><!-- /.panel-heading -->
+						<div class="panel-body">
+							<pre><xmp><div class="circular-preloader-demo circular-preloader-demo-indeterminate2" data-toggle="circular-progress" data-mode="indeterminate" data-type="success" data-state="pause"></div></xmp></pre>
+						</div>
+					</div>									
+				</div>
+				<div class="col-lg-6">
+					<div class="panel panel-default">
+						<div class="panel-heading panel-heading-xs">
+							<header>
+								JAVASCRIPT Code:
+							</header>
+							<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+						</div><!-- /.panel-heading -->
+						<div class="panel-body">
+							<pre><xmp>$(".btn-circular-progress-demo-4").on("click",function(){
+$(".circular-preloader-demo-indeterminate2").circularProgress("pause");
+});
+$(".btn-circular-progress-demo-5").on("click",function(){
+$(".circular-preloader-demo-indeterminate2").circularProgress("play");
+});
+$(".btn-circular-progress-demo-6").on("click",function(){
+$(".circular-preloader-demo-indeterminate2").circularProgress("hide");
+});
+$(".btn-circular-progress-demo-7").on("click",function(){
+$(".circular-preloader-demo-indeterminate2").circularProgress("show");
+});</xmp></pre>
+						</div>
+					</div>									
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard, circularProgress, setProgressTimeout;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Circular Preloader
+		 */
+		$(function() {
+		
+			circularProgress = $("[data-toggle='circular-progress']").circularProgress();
+		
+			setProgress(0);
+
+			function setProgress(val){
+				var progress = val +5;
+				if (progress > 100) {
+					progress = 1;
+				}
+
+				$(".circular-preloader-demo-determinate").circularProgress("set",progress);
+				setProgressTimeout = setTimeout(function(){
+					setProgress(progress);
+				},500);
+			}
+
+
+			$(".btn-circular-progress-demo-1").on("click",function(){
+				$(".circular-preloader-demo-determinate2").circularProgress("set",25);
+			});
+			$(".btn-circular-progress-demo-2").on("click",function(){
+				$(".circular-preloader-demo-determinate2").circularProgress("set",73);
+			});
+			$(".btn-circular-progress-demo-3").on("click",function(){
+				$(".circular-preloader-demo-determinate2").circularProgress("set",100);
+			});
+			$(".btn-circular-progress-demo-4").on("click",function(){
+				$(".circular-preloader-demo-indeterminate2").circularProgress("pause");
+			});
+			$(".btn-circular-progress-demo-5").on("click",function(){
+				$(".circular-preloader-demo-indeterminate2").circularProgress("play");
+			});
+			$(".btn-circular-progress-demo-6").on("click",function(){
+				$(".circular-preloader-demo-indeterminate2").circularProgress("hide");
+			});
+			$(".btn-circular-progress-demo-7").on("click",function(){
+				$(".circular-preloader-demo-indeterminate2").circularProgress("show");
+			});
+		});
+		
+		
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+		circularProgress.destroy(); circularProgress = void 0;
+		clearTimeout(setProgressTimeout); setProgressTimeout = void 0;
+	}
+</script>

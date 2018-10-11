@@ -1,0 +1,199 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Other Features</li>
+		<li>IdleTimer</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			IdleTimer
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				IdleTimer fires a custom event when the user is "idle". Idle is defined by not moving the mouse, scrolling the mouse wheel and using the keyboard.
+			</p>								
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Usage</h2>
+			<p>There are two ways to instantiate. Either statically, or on an element. Element bound timers 
+will only watch for events inside of them. You may just want page-level activity, in which 
+case you may set up your timers on <code>document</code>, <code>document.documentElement</code>, and <code>document.body</code>.
+Instantiate returns jQuery for chaining.</p>
+		</div>
+
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						JAVASCRIPT Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp>$(function() {
+    // binds to document - shorthand
+    $.idleTimer();
+
+    // binds to document - explicit
+    $( document ).idleTimer();
+
+    // bind to different element
+    $( "#myTextArea" ).idleTimer();
+});</xmp></pre>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-lg-12">
+			<h2 class="text-primary">Bemat Integration</h2>
+			<p>Bemat also provides a built-in idle mode that you can configure on <span class="label label-primary">bemat-config.js</span> by setting the <code>$.idle</code> and <code>$.idleTimeout</code> variables. Setting <code>$.idle</code> to <code>true</code> will activates the idle mode, and Bemat will listen for user idle.</p>
+		</div>
+		
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});
+			e.clearSelection();
+		});
+		
+		
+		/**
+		 * SweetAlert
+		 */
+		$("#btntest-swalert1").on("click",function(){
+			swal("Hello world!");
+		});
+		$("#btntest-swalert2").on("click",function(){
+			swal("Oops...", "Something went wrong!", "error");
+		});
+		$("#btntest-swalert3").on("click",function(){
+			swal({
+				title: "An input!",
+				text: 'Write something interesting:',
+				type: 'input',
+				showCancelButton: true,
+				closeOnConfirm: false,
+				animation: "slide-from-top"
+			}, function(inputValue){
+				console.log("You wrote", inputValue);
+			});
+		});
+		
+		
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

@@ -1,0 +1,741 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Bemat Admin</li>
+		<li>Components</li>
+		<li>Panels</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Panels
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				While not always necessary, sometimes you need to put your DOM in a box. For those situations, try the panel component.
+			</p>						
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Basic example</h2>
+			<p>By default, all the <code>.panel</code> does is apply some basic border and padding to contain some content.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<h4>Examples:</h4>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<header>Panel Heading</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<header>Panel Heading: Menu with icons</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li>
+									<a href="#"><i class="material-icons">done</i> Item 1</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#"><i class="material-icons">delete</i> Item 1</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<header>Panel Heading: Button Group</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-help"><i class="material-icons">help</i></a>
+							<a class="btn btn-icon-toggle panel-tools-collapse"><i class="material-icons">expand_more</i></a>
+							<a class="btn btn-icon-toggle panel-tools-close"><i class="material-icons">close</i></a>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<h4>HTML Code:</h4>
+			<div class="panel panel-default">
+				<div class="panel-body height-10">
+					<pre><xmp><div class="panel panel-default">
+<div class="panel-heading">
+<header>Panel Heading</header>
+
+<div class="panel-heading-tools">
+<div class="btn-group">
+<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<ul class="dropdown-menu dropdown-menu-right">
+<li><a href="#">Item 1</a></li>
+<li><a href="#">Item 2</a></li>
+<li class="divider"></li>
+<li><a href="#">Item 3</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel-body">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<header>Panel Heading: Menu with icons</header>
+
+<div class="panel-heading-tools">
+<div class="btn-group">
+<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<ul class="dropdown-menu dropdown-menu-right">
+<li>
+	<a href="#"><i class="material-icons">done</i> Item 1</a>
+</li>
+<li class="divider"></li>
+<li>
+	<a href="#"><i class="material-icons">delete</i> Item 1</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel-body">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<header>Panel Heading: Button Group</header>
+
+<div class="panel-heading-tools">
+<div class="btn-group">
+<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+<a class="btn btn-icon-toggle panel-tools-help"><i class="material-icons">help</i></a>
+<a class="btn btn-icon-toggle panel-tools-collapse"><i class="material-icons">expand_more</i></a>
+<a class="btn btn-icon-toggle panel-tools-close"><i class="material-icons">close</i></a>
+</div>
+</div>
+</div>
+<div class="panel-body">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</div>
+</div></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Actions Bar</h2>
+			<p>Supplemental actions within the panel are explicitly called out using icons, text, and UI controls, typically placed at the bottom of the card.
+			Limit supplemental actions to two actions, in addition to an overflow menu.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<h4>Examples:</h4>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<header>Panel Heading</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+				<div class="panel-footer">
+					<a href="#" class="btn btn-default btn-flat">Action 1</a>
+					<a href="#" class="btn btn-default btn-flat">Action 2</a>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<header>Panel Heading</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#demoModal1" data-toggle="modal" >Item 2</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Item 3</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+				<div class="panel-footer">
+					<a href="#" class="btn btn-default btn-flat">Action 1</a>
+					<a href="#demoModal1" data-toggle="modal" class="btn btn-primary btn-flat">Open Modal</a>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<header>Panel Heading: Button Group</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-help"><i class="material-icons">help</i></a>
+							<a class="btn btn-icon-toggle panel-tools-collapse"><i class="material-icons">expand_more</i></a>
+							<a class="btn btn-icon-toggle panel-tools-close"><i class="material-icons">close</i></a>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+					<div class="panel-footer inner-offset">
+						<a href="#" class="btn btn-default btn-flat">Action 1</a>
+						<a href="#" class="btn btn-primary btn-flat">Action 2</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-6">
+			<h4>HTML Code:</h4>
+			<div class="panel panel-default">
+				<div class="panel-body height-12">
+					<pre><xmp><div class="panel panel-default">
+<div class="panel-heading">
+<header>Panel Heading</header>
+
+<div class="panel-heading-tools">
+<div class="btn-group">
+<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<ul class="dropdown-menu dropdown-menu-right">
+<li><a href="#">Item 1</a></li>
+<li><a href="#">Item 2</a></li>
+<li class="divider"></li>
+<li><a href="#">Item 3</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel-body">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+</div>
+<div class="panel-footer">
+<a href="#" class="btn btn-default btn-flat">Action 1</a>
+<a href="#" class="btn btn-default btn-flat">Action 2</a>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<header>Panel Heading</header>
+
+<div class="panel-heading-tools">
+<div class="btn-group">
+<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+<ul class="dropdown-menu dropdown-menu-right">
+<li><a href="#">Item 1</a></li>
+<li><a href="#">Item 2</a></li>
+<li class="divider"></li>
+<li><a href="#">Item 3</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel-body">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+</div>
+<div class="panel-footer">
+<a href="#" class="btn btn-default btn-flat">Action 1</a>
+<a href="#" class="btn btn-primary btn-flat">Action 2</a>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<header>Panel Heading: Button Group</header>
+
+<div class="panel-heading-tools">
+<div class="btn-group">
+<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+<a class="btn btn-icon-toggle panel-tools-help"><i class="material-icons">help</i></a>
+<a class="btn btn-icon-toggle panel-tools-collapse"><i class="material-icons">expand_more</i></a>
+<a class="btn btn-icon-toggle panel-tools-close"><i class="material-icons">close</i></a>
+</div>
+</div>
+</div>
+<div class="panel-body">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+<div class="panel-footer inner-offset">
+<a href="#" class="btn btn-default btn-flat">Action 1</a>
+<a href="#" class="btn btn-primary btn-flat">Action 2</a>
+</div>
+</div>
+</div></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Styling Options</h2>
+			<p>All the panels can be formatted in different ways so that it best suits its content.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<h4>Examples:</h4>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<header>Panel Header</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Basic Panel</em>
+			
+			
+			<div class="panel panel-default panel-divider">
+				<div class="panel-heading">
+					<header>Panel Header</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Header with divider</em>
+			
+			
+			<div class="panel panel-primary panel-bordered">
+				<div class="panel-heading">
+					<header>Panel Header</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Bordered Panel</em>
+			
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<header>Panel Header</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Solid Header Panel</em>
+			
+			
+			<div class="panel panel-primary panel-bordered">
+				<div class="panel-heading">
+					<header>Panel Header</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Solid Header Bordered Panel</em>
+			
+			
+			<div class="panel panel-default primary-style">
+				<div class="panel-heading">
+					<header>Panel Header</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Solid Body Panel</em>
+			
+			
+			<div class="panel panel-primary primary-style">
+				<div class="panel-heading">
+					<header>Panel Header</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Solid Full Panel</em>
+			
+			
+			<div class="panel panel-primary panel-divider primary-style">
+				<div class="panel-heading">
+					<header>Panel Header</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Solid Full Panel - Header with divider</em>
+		</div>
+
+		<div class="col-lg-6">
+			<h4>HTML Code:</h4>
+			<div class="panel panel-default">
+				<div class="panel-body height-12">
+					<pre><xmp></xmp></pre>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Sizing Options</h2>
+			<p>If you need to change the emphasis of the panel, you can do it by changing the header size class.</p>
+		</div>
+		
+		
+		<div class="col-lg-6">
+			<h4>Examples:</h4>
+			<div class="panel panel-primary">
+				<div class="panel-heading panel-heading-xs">
+					<header>Panel Header XS</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">XSmall Header Panel</em>
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading panel-heading-sm">
+					<header>Panel Header SM</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Small Header Panel</em>
+			
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<header>Panel Header Normal</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Normal Header Panel</em>
+			
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading panel-heading-lg">
+					<header>Panel Header Large</header>
+
+					<div class="panel-heading-tools">
+						<div class="btn-group">
+							<a class="btn btn-icon-toggle panel-tools-loading"><i class="fa fa-refresh fa-spin"></i></a>
+							<a class="btn btn-icon-toggle panel-tools-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Item 1</a></li>
+								<li><a href="#">Item 2</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</div>
+			</div>
+			<em class="text-caption">Large Header Panel</em>
+		</div>
+		
+		
+		
+	</div>
+
+
+
+
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

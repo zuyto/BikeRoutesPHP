@@ -1,0 +1,259 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Bemat Admin</li>
+		<li>Components</li>
+		<li>Accordions</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Accordions
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				Accordion houses multiple vertically stacked tabs, but can open only one tab at a time.
+			</p>						
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Structure</h2>
+			<p>Accordion elements only need initialization if they are added dynamically. You can also pass in options inside the initialization, however this can be done in the HTML markup as well.</p>
+			<p>Accordions are structured by a set of panels under a panel-group</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="panel-group" id="accordion1">
+						<div class="panel panel-default">
+							<div aria-expanded="true" class="panel-heading" data-toggle="collapse" data-parent="#accordion1" data-target="#accordion1-1">
+								<header>Header</header>
+								<div class="panel-heading-tools">
+									<div class="btn-group">
+							
+									</div>
+								</div>
+							</div>
+							<div style="" aria-expanded="true" id="accordion1-1" class="collapse in">
+								<div class="panel-body">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+								</div>
+							</div>
+						</div><!--end .panel -->
+						<div class="panel">
+							<div aria-expanded="false" class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion1" data-target="#accordion1-2">
+								<header>Header</header>
+								<div class="panel-heading-tools">
+									<div class="btn-group">
+							
+									</div>
+								</div>
+							</div>
+							<div aria-expanded="false" id="accordion1-2" class="collapse">
+								<div class="panel-body">
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+								</div>
+							</div>
+						</div><!--end .panel -->
+						<div class="panel">
+							<div aria-expanded="false" class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion1" data-target="#accordion1-3">
+								<header>Header</header>
+								<div class="panel-heading-tools">
+									<div class="btn-group">
+							
+									</div>
+								</div>
+							</div>
+							<div aria-expanded="false" id="accordion1-3" class="collapse">
+								<div class="panel-body">
+									<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+								</div>
+							</div>
+						</div><!--end .panel -->
+					</div><!-- /.panel-group -->
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-10">
+					<pre><xmp><div class="panel-group" id="accordion1">
+<div class="panel panel-default">
+<div aria-expanded="true" class="panel-heading" data-toggle="collapse" data-parent="#accordion1" data-target="#accordion1-1">
+<header>Header</header>
+<div class="panel-heading-tools">
+<div class="btn-group">
+
+</div>
+</div>
+</div>
+<div style="" aria-expanded="true" id="accordion1-1" class="collapse in">
+<div class="panel-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+</div>
+</div><!--end .panel -->
+<div class="panel">
+<div aria-expanded="false" class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion1" data-target="#accordion1-2">
+<header>Header</header>
+<div class="panel-heading-tools">
+<div class="btn-group">
+
+</div>
+</div>
+</div>
+<div aria-expanded="false" id="accordion1-2" class="collapse">
+<div class="panel-body">
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+</div>
+</div>
+</div><!--end .panel -->
+<div class="panel">
+<div aria-expanded="false" class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion1" data-target="#accordion1-3">
+<header>Header</header>
+<div class="panel-heading-tools">
+<div class="btn-group">
+
+</div>
+</div>
+</div>
+<div aria-expanded="false" id="accordion1-3" class="collapse">
+<div class="panel-body">
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+</div>
+</div>
+</div><!--end .panel -->
+</div><!-- /.panel-group --></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

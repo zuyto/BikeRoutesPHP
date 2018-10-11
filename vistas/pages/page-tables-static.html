@@ -1,0 +1,911 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Bemat Admin</li>
+		<li>Components</li>
+		<li>Tables</li>
+		<li>Static</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Static Tables
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				Tables are primarily used to arrange a lot of different data into rows and columns.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Basic Example</h2>
+			<p>For basic styling—light padding and only horizontal dividers—add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="panel-table-inner-offset">
+						<table id="table1" class="table">
+							<thead>
+								<tr>
+									<th class="text-right">Carbs (g)</th>
+									<th class="text-right">Protein (g)</th>
+									<th class="text-right">Sodium (mg)</th>
+									<th class="text-right">Calcium %...</th>
+									<th class="text-right">Iron %...</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="text-right">
+									<td>24</td>
+									<td>4.0</td>
+									<td>87</td>
+									<td>14%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>37</td>
+									<td>4.3</td>
+									<td>129</td>
+									<td>8%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>24</td>
+									<td>6.0</td>
+									<td>337</td>
+									<td>6%</td>
+									<td>7%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-4">
+					<pre><xmp><table id="table1" class="table">
+	<thead>
+		<tr>
+			<th class="text-right">Carbs (g)</th>
+			<th class="text-right">Protein (g)</th>
+			<th class="text-right">Sodium (mg)</th>
+			<th class="text-right">Calcium %...</th>
+			<th class="text-right">Iron %...</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="text-right">
+			<td>24</td>
+			<td>4.0</td>
+			<td>87</td>
+			<td>14%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>37</td>
+			<td>4.3</td>
+			<td>129</td>
+			<td>8%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>24</td>
+			<td>6.0</td>
+			<td>337</td>
+			<td>6%</td>
+			<td>7%</td>
+		</tr>
+	</tbody>
+</table></xmp></pre>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<h3>Basic Table with Checkbox</h3>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="panel-table-inner-offset">
+						<table id="table1" class="table" data-row-select="true">
+							<thead>
+								<tr>
+									<th><input class="checkbox checkbox-primary" type="checkbox" /></th>
+									<th class="text-right">Carbs (g)</th>
+									<th class="text-right">Protein (g)</th>
+									<th class="text-right">Sodium (mg)</th>
+									<th class="text-right">Calcium %...</th>
+									<th class="text-right">Iron %...</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="text-right">
+									<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+									<td>24</td>
+									<td>4.0</td>
+									<td>87</td>
+									<td>14%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+									<td>37</td>
+									<td>4.3</td>
+									<td>129</td>
+									<td>8%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+									<td>24</td>
+									<td>6.0</td>
+									<td>337</td>
+									<td>6%</td>
+									<td>7%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-4">
+					<pre><xmp><table id="table1" class="table" data-row-select="true">
+	<thead>
+		<tr>
+			<th><input class="checkbox checkbox-primary" type="checkbox" /></th>
+			<th class="text-right">Carbs (g)</th>
+			<th class="text-right">Protein (g)</th>
+			<th class="text-right">Sodium (mg)</th>
+			<th class="text-right">Calcium %...</th>
+			<th class="text-right">Iron %...</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="text-right">
+			<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+			<td>24</td>
+			<td>4.0</td>
+			<td>87</td>
+			<td>14%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+			<td>37</td>
+			<td>4.3</td>
+			<td>129</td>
+			<td>8%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td><input class="checkbox checkbox-primary" type="checkbox" /></td>
+			<td>24</td>
+			<td>6.0</td>
+			<td>337</td>
+			<td>6%</td>
+			<td>7%</td>
+		</tr>
+	</tbody>
+</table></xmp></pre>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Stripped Rows</h2>
+			<p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="panel-table-inner-offset">
+						<table id="table1" class="table table-striped">
+							<thead>
+								<tr>
+									<th class="text-right">Carbs (g)</th>
+									<th class="text-right">Protein (g)</th>
+									<th class="text-right">Sodium (mg)</th>
+									<th class="text-right">Calcium %...</th>
+									<th class="text-right">Iron %...</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="text-right">
+									<td>24</td>
+									<td>4.0</td>
+									<td>87</td>
+									<td>14%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>37</td>
+									<td>4.3</td>
+									<td>129</td>
+									<td>8%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>24</td>
+									<td>6.0</td>
+									<td>337</td>
+									<td>6%</td>
+									<td>7%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-4">
+					<pre><xmp><table id="table1" class="table table-striped">
+	<thead>
+		<tr>
+			<th class="text-right">Carbs (g)</th>
+			<th class="text-right">Protein (g)</th>
+			<th class="text-right">Sodium (mg)</th>
+			<th class="text-right">Calcium %...</th>
+			<th class="text-right">Iron %...</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="text-right">
+			<td>24</td>
+			<td>4.0</td>
+			<td>87</td>
+			<td>14%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>37</td>
+			<td>4.3</td>
+			<td>129</td>
+			<td>8%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>24</td>
+			<td>6.0</td>
+			<td>337</td>
+			<td>6%</td>
+			<td>7%</td>
+		</tr>
+	</tbody>
+</table></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Bordered Table</h2>
+			<p>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="panel-table-inner-offset">
+						<table id="table1" class="table table-bordered" data-row-select="false">
+							<thead>
+								<tr>
+									<th class="text-right">Carbs (g)</th>
+									<th class="text-right">Protein (g)</th>
+									<th class="text-right">Sodium (mg)</th>
+									<th class="text-right">Calcium %...</th>
+									<th class="text-right">Iron %...</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="text-right">
+									<td>24</td>
+									<td>4.0</td>
+									<td>87</td>
+									<td>14%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>37</td>
+									<td>4.3</td>
+									<td>129</td>
+									<td>8%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>24</td>
+									<td>6.0</td>
+									<td>337</td>
+									<td>6%</td>
+									<td>7%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-4">
+					<pre><xmp><table id="table1" class="table table-bordered" data-row-select="false">
+	<thead>
+		<tr>
+			<th class="text-right">Carbs (g)</th>
+			<th class="text-right">Protein (g)</th>
+			<th class="text-right">Sodium (mg)</th>
+			<th class="text-right">Calcium %...</th>
+			<th class="text-right">Iron %...</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="text-right">
+			<td>24</td>
+			<td>4.0</td>
+			<td>87</td>
+			<td>14%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>37</td>
+			<td>4.3</td>
+			<td>129</td>
+			<td>8%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>24</td>
+			<td>6.0</td>
+			<td>337</td>
+			<td>6%</td>
+			<td>7%</td>
+		</tr>
+	</tbody>
+</table></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Hover Rows</h2>
+			<p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="panel-table-inner-offset">
+						<table id="table1" class="table table-hover" data-row-select="false">
+							<thead>
+								<tr>
+									<th class="text-right">Carbs (g)</th>
+									<th class="text-right">Protein (g)</th>
+									<th class="text-right">Sodium (mg)</th>
+									<th class="text-right">Calcium %...</th>
+									<th class="text-right">Iron %...</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="text-right">
+									<td>24</td>
+									<td>4.0</td>
+									<td>87</td>
+									<td>14%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>37</td>
+									<td>4.3</td>
+									<td>129</td>
+									<td>8%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>24</td>
+									<td>6.0</td>
+									<td>337</td>
+									<td>6%</td>
+									<td>7%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-4">
+					<pre><xmp><table id="table1" class="table table-hover" data-row-select="false">
+	<thead>
+		<tr>
+			<th class="text-right">Carbs (g)</th>
+			<th class="text-right">Protein (g)</th>
+			<th class="text-right">Sodium (mg)</th>
+			<th class="text-right">Calcium %...</th>
+			<th class="text-right">Iron %...</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="text-right">
+			<td>24</td>
+			<td>4.0</td>
+			<td>87</td>
+			<td>14%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>37</td>
+			<td>4.3</td>
+			<td>129</td>
+			<td>8%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>24</td>
+			<td>6.0</td>
+			<td>337</td>
+			<td>6%</td>
+			<td>7%</td>
+		</tr>
+	</tbody>
+</table></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Condensed Table</h2>
+			<p>Add <code>.table-condensed</code> to make tables more compact by cutting cell padding in half.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="panel-table-inner-offset">
+						<table id="table1" class="table table-condensed" data-row-select="false">
+							<thead>
+								<tr>
+									<th class="text-right">Carbs (g)</th>
+									<th class="text-right">Protein (g)</th>
+									<th class="text-right">Sodium (mg)</th>
+									<th class="text-right">Calcium %...</th>
+									<th class="text-right">Iron %...</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="text-right">
+									<td>24</td>
+									<td>4.0</td>
+									<td>87</td>
+									<td>14%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>37</td>
+									<td>4.3</td>
+									<td>129</td>
+									<td>8%</td>
+									<td>1%</td>
+								</tr>
+								<tr class="text-right">
+									<td>24</td>
+									<td>6.0</td>
+									<td>337</td>
+									<td>6%</td>
+									<td>7%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-4">
+					<pre><xmp><table id="table1" class="table table-condensed" data-row-select="false">
+	<thead>
+		<tr>
+			<th class="text-right">Carbs (g)</th>
+			<th class="text-right">Protein (g)</th>
+			<th class="text-right">Sodium (mg)</th>
+			<th class="text-right">Calcium %...</th>
+			<th class="text-right">Iron %...</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="text-right">
+			<td>24</td>
+			<td>4.0</td>
+			<td>87</td>
+			<td>14%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>37</td>
+			<td>4.3</td>
+			<td>129</td>
+			<td>8%</td>
+			<td>1%</td>
+		</tr>
+		<tr class="text-right">
+			<td>24</td>
+			<td>6.0</td>
+			<td>337</td>
+			<td>6%</td>
+			<td>7%</td>
+		</tr>
+	</tbody>
+</table></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Contextual Classes</h2>
+			<p>Use contextual classes to color table rows or individual cells.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="panel-table-inner-offset">
+						<table class="table" data-row-select="false">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Column heading</th>
+									<th>Column heading</th>
+									<th>Column heading</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="active">
+									<th scope="row">1</th>
+									<td>Column content</td>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Column content</td>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="success">
+									<th scope="row">3</th>
+									<td>Column content</td>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr>
+								<th scope="row">4</th>
+									<td>Column content</td>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="info">
+									<th scope="row">5</th>
+									<td>Column content</td>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr>
+									<th scope="row">6</th>
+									<td>Column content</td>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr class="warning">
+									<th scope="row">7</th>
+									<td>Column content</td>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+								<tr>
+									<th scope="row">8</th>
+									<td>Column content</td>
+									<td>Column content</td>
+								<td>Column content</td>
+								</tr>
+								<tr class="danger">
+									<th scope="row">9</th>
+									<td>Column content</td>
+									<td>Column content</td>
+									<td>Column content</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-4">
+					<pre><xmp><table class="table" data-row-select="false">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Column heading</th>
+			<th>Column heading</th>
+			<th>Column heading</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="active">
+			<th scope="row">1</th>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td>Column content</td>
+		</tr>
+		<tr>
+			<th scope="row">2</th>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td>Column content</td>
+		</tr>
+		<tr class="success">
+			<th scope="row">3</th>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td>Column content</td>
+		</tr>
+		<tr>
+		<th scope="row">4</th>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td>Column content</td>
+		</tr>
+		<tr class="info">
+			<th scope="row">5</th>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td>Column content</td>
+		</tr>
+		<tr>
+			<th scope="row">6</th>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td>Column content</td>
+		</tr>
+		<tr class="warning">
+			<th scope="row">7</th>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td>Column content</td>
+		</tr>
+		<tr>
+			<th scope="row">8</th>
+			<td>Column content</td>
+			<td>Column content</td>
+		<td>Column content</td>
+		</tr>
+		<tr class="danger">
+			<th scope="row">9</th>
+			<td>Column content</td>
+			<td>Column content</td>
+			<td>Column content</td>
+		</tr>
+	</tbody>
+</table></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+		"Checkbox"
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

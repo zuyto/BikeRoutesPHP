@@ -1,0 +1,255 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Bemat Admin</li>
+		<li>Components</li>
+		<li>Notifications</li>
+		<li>Snackbar</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			Snackbar
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="alert alert-callout alert-info alert-exclusive">
+				<span class="badge badge-default-dark"><i class="material-icons md-18">star</i></span>  Bemat Admin Exclusive Premium Plugin
+			</div>
+			<p class="lead">
+				Snackbars provide lightweight feedback about an operation by showing a brief message at the bottom of the screen. Snackbars can contain an action.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Usage</h2>
+			<p>Show only one snackbar on screen at a time.</p>
+			<h2 class="text-primary">Initializing</h2>
+			<p>For performance reasons, the Snackbars are opt-in, meaning you must initialize them yourself.</p>
+			<pre><xmp>$(function () {
+$.snackbar();
+});</xmp></pre>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-6">
+							<button id="btntest-snackbar1" class="btn btn-default btn-raised" type="button">Success Snackbar</button>
+						</div>
+						<div class="col-sm-6">
+							<button id="btntest-snackbar2" class="btn btn-default btn-raised" type="button">Info Snackbar</button>
+						</div>
+						<div class="col-sm-6">
+							<button id="btntest-snackbar3" class="btn btn-default btn-raised" type="button">Warning Snackbar</button>
+						</div>
+						<div class="col-sm-6">
+							<button id="btntest-snackbar4" class="btn btn-default btn-raised" type="button">Danger Snackbar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						JAVASCRIPT Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+				<pre><xmp>$(function () {
+$("#btntest-snackbar1").on("click",function(){
+$.snackbar("add",{
+type: 		"success",
+msg: 		"Message sent",
+buttonText: "Close",
+});
+});
+$("#btntest-snackbar2").on("click",function(){
+$.snackbar("add",{
+type: 		"info",
+msg: 		"Marked as read",
+buttonText: "Undo",
+});
+});
+$("#btntest-snackbar3").on("click",function(){
+$.snackbar("add",{
+type: 		"warning",
+msg: 		"This item already has the label 'travel'. You can add a new label.",
+buttonText: "Close",
+disappearTime: 10000,
+});
+});
+$("#btntest-snackbar4").on("click",function(){
+$.snackbar("add",{
+type: 		"danger",
+msg: 		"Connection timed out. Showing limited messages.",
+buttonText: "Close",
+});
+});
+});</xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Snackbar Plugin
+		 */
+		$(document).on("show.cc.snackbar",function(){
+			console.log("Snackbar shown");
+		});
+
+		$("#btntest-snackbar1").on("click",function(){
+			$.snackbar("add",{
+				type: 		"success",
+				msg: 		"Message sent",
+				buttonText: "Close",
+			});
+		});
+		$("#btntest-snackbar2").on("click",function(){
+			$.snackbar("add",{
+				type: 		"info",
+				msg: 		"Marked as read",
+				buttonText: "Undo",
+			});
+		});
+		$("#btntest-snackbar3").on("click",function(){
+			$.snackbar("add",{
+				type: 		"warning",
+				msg: 		"This item already has the label 'travel'. You can add a new label.",
+				buttonText: "Close",
+				disappearTime: 10000,
+			});
+		});
+		$("#btntest-snackbar4").on("click",function(){
+			$.snackbar("add",{
+				type: 		"danger",
+				msg: 		"Connection timed out. Showing limited messages.",
+				buttonText: "Close",
+			});
+		});
+	
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

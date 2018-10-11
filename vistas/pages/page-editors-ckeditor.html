@@ -1,0 +1,266 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Components</li>
+		<li>Editors</li>
+		<li>CKEditor</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			CKEditor
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				CKEditor is a ready-for-use HTML text editor designed to simplify web content creation. It's a WYSIWYG editor that brings common word processor features directly to your web pages. Enhance your website experience with our community maintained editor.
+			</p>								
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Classic Editor</h2>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<textarea id="ckeditorBasic" placeholder="Enter text here">
+						<h1>This is CKEditor</h1>
+						<p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. <b>Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis</b>. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. </p>
+						<h2>Lorem ipsum dolor sit amet</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit</i>. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. <b>Fusce nec tellus sed augue semper porta</b>. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. </p>
+					</textarea>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-12">
+			<h2 class="text-primary">Inline Editor</h2>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div id="ckeditorInline" contenteditable="true">
+						<h1>Inline Editing in Action!</h1>
+						<p>The "div" element that contains this text is now editable.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Editor Skins</h2>
+			<p>The look and feel of the CKEditor user interface can be adjusted to your taste and customized through skins. Elements like the toolbar, dialog windows, buttons, and even their icons, can be changed to match the style of your website or application. The default installation of CKEditor comes with the Moono skin.</p>
+			<p>Note that it is not possible to have editors with different skin settings in the same page. In such case just one of the skins will be used for all editors.</p>
+			
+			<h3>Skin Preview:</h3>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<iframe id="ckeditorPreviewer" marginheight="0" marginwidth="0" src="pages/page-editors-ckeditor-demoskin1.html" style="height:250px;width:100%" frameborder="0"></iframe>
+				</div>
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Available Skins
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body no-padding">
+					<div class="padding-horizontal-2">
+						<span class="label label-primary">Note:</span> This setting can be adjusted inside <span class="label label-primary-dark">bemat-config.js</span> file.
+					</div>
+
+					<div class="table-responsive">
+						<table class="table table-condensed table-striped margin-top-2">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Skin Code</th>
+									<th>Description</th>
+									<th>Preview</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b><i>Bootstrapck</i></b></td>
+									<td><code>bootstrapck</code></td>
+									<td>The BootstrapCK-Skin is a skin for CKEditor4 based on Twitter Bootstrap3 styles.</td>
+									<td><button type="button" class="btn btn-raised btn-default-bright btn-xs btnCKEditorPreview" data-ckeditor-preview="1">Preview Skin</button></td>
+								</tr>
+								<tr>
+									<td><b><i>Icy Orange</i></b></td>
+									<td><code>icy_orange</code></td>
+									<td>skin with a few orange elements in the toolbar for additional color. Most of the icons are new despite looking similar to Moono.</td>
+									<td><button type="button" class="btn btn-raised btn-default-bright btn-xs btnCKEditorPreview" data-ckeditor-preview="2">Preview Skin</button></td>
+								</tr>
+								<tr>
+									<td><b><i>Lightwire</i></b></td>
+									<td><code>lightwire</code></td>
+									<td>A cleaner and nicer CKEditor Skin using fontawesome, based on "Icy Orange".</td>
+									<td><button type="button" class="btn btn-raised btn-default-bright btn-xs btnCKEditorPreview" data-ckeditor-preview="3">Preview Skin</button></td>
+								</tr>
+								<tr>
+									<td><b><i>Minimalist</i></b></td>
+									<td><code>minimalist</code></td>
+									<td>A port of the default CKEditor skin, Moono, without the gradients.</td>
+									<td><button type="button" class="btn btn-raised btn-default-bright btn-xs btnCKEditorPreview" data-ckeditor-preview="4">Preview Skin</button></td>
+								</tr>
+								<tr>
+									<td><b><i>Moono</i></b></td>
+									<td><code>moono</code></td>
+									<td>A modern monochromatic skin. The offical skin of CKEditor. Neutral design that fits all situations. Optimized for accessibility, using WAI-ARIA</td>
+									<td><button type="button" class="btn btn-raised btn-default-bright btn-xs btnCKEditorPreview" data-ckeditor-preview="5">Preview Skin</button></td>
+								</tr>
+								<tr>
+									<td><b><i>Moono Dark</i></b></td>
+									<td><code>moono-dark</code></td>
+									<td>This theme is a dark version of Moono Skin.</td>
+									<td><button type="button" class="btn btn-raised btn-default-bright btn-xs btnCKEditorPreview" data-ckeditor-preview="6">Preview Skin</button></td>
+								</tr>
+								<tr>
+									<td><b><i>Moono Color</i></b></td>
+									<td><code>moonocolor</code></td>
+									<td>Based on the offical skin of CKEditor "Moono".  All the icons have been changed using FAMFAMFAM icons.</td>
+									<td><button type="button" class="btn btn-raised btn-default-bright btn-xs btnCKEditorPreview" data-ckeditor-preview="7">Preview Skin</button></td>
+								</tr>
+								<tr>
+									<td><b><i>Office 2013</i></b></td>
+									<td><code>office2013</code></td>
+									<td>Microsoft Office 2013 skin. Flat design ui.</td>
+									<td><button type="button" class="btn btn-raised btn-default-bright btn-xs btnCKEditorPreview" data-ckeditor-preview="8">Preview Skin</button></td>
+								</tr>
+								<tr>
+									<td><b><i>Kama</i></b></td>
+									<td><code>kama</code></td>
+									<td>The default CKEditor 3 skin ported to CKEditor 4.</td>
+									<td><button type="button" class="btn btn-raised btn-default-bright btn-xs btnCKEditorPreview" data-ckeditor-preview="9">Preview Skin</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /.table-responsive -->				
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var ckeditorBasic, ckeditorInline;
+	var doneScriptsLoad = function(){
+		/**
+		 * CKEditor
+		 */
+		ckeditorBasic 	= $("#ckeditorBasic").ckeditor();
+
+		ckeditorInline	= CKEDITOR.inline('ckeditorInline');
+		
+		$(".btnCKEditorPreview").on("click",function(){
+			var skinId 	= $(this).data("ckeditor-preview"),
+				url 	= "pages/page-editors-ckeditor-demoskin"+skinId+".html";
+			
+			$("#ckeditorPreviewer").attr("src",url);
+			$.toasts("add",{
+				msg: "Skin Changed",
+			});	
+			
+		});
+		
+	} // END: doneScriptsLoad-();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		CKEDITOR.instances.ckeditorBasic.destroy();
+		CKEDITOR.instances.ckeditorInline.destroy();
+	}
+</script>

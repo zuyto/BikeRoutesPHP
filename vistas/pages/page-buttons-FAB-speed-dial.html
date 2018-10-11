@@ -1,0 +1,273 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Bemat Admin</li>
+		<li>Components</li>
+		<li>Buttons</li>
+		<li>FAB Speed Dial</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			FAB Speed Dial
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="alert alert-callout alert-info alert-exclusive">
+				 <span class="badge badge-default-dark"><i class="material-icons md-18">star</i></span>  Bemat Admin Exclusive Premium Plugin
+			</div>
+			<p class="lead">
+				The Speed Dial component inspired by Google Inbox allows for a small number of items to animate out from a floating action button (FAB). The floating action button can fling out related actions upon press.
+			</p>								
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">FAB Speed Dial</h2>
+			<p>You may supply a direction of <code>left</code>, <code>up</code>, <code>down</code> or <code>right</code> through the <code>data-direction</code> attribute, and an animation mode of <code>fling</code> or <code>scale</code> through the <code>data-mode</code> attribute.</p>
+		</div>
+
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="speed-dial-demo">
+						<div id="demo-speed-dial" class="md-fab-speed-dial" data-toggle="speed-dial" data-mode="fling">
+							<div class="md-fab-trigger" aria-expanded="false" aria-haspopup="true">
+								<button type="button" class="btn btn-floating-action btn-info"><i class="material-icons">menu</i></button>
+							</div>
+							
+							<ul class="md-fab-actions" aria-hidden="true">
+								<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="tooltip" data-placement="left" title="Tooltip here"><i class="material-icons">3d_rotation</i></a></li>
+								<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">attach_file</i></a></li>
+								<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">backup</i></a></li>
+								<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">brush</i></a></li>
+								<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">pageview</i></a></li>
+								<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">send</i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<h4>Direction</h4>
+							<div class="radio"><label>
+								<input class="radio radio-primary radio-up-fabspeeddial" type="radio" name="fab-direction" value="up" checked/>
+								Up
+							</label></div>
+							<div class="radio"><label>
+								<input class="radio radio-primary radio-down-fabspeeddial" type="radio" name="fab-direction" value="down" />
+								Down
+							</label></div>
+							<div class="radio"><label>
+								<input class="radio radio-primary radio-left-fabspeeddial" type="radio" name="fab-direction" value="left" />
+								Left
+							</label></div>
+							<div class="radio"><label>
+								<input class="radio radio-primary radio-right-fabspeeddial" type="radio" name="fab-direction" value="right" />
+								Right
+							</label></div>
+						</div>
+						<div class="col-sm-4">
+							<h4>Open/Closed</h4>
+							<div class="radio"><label>
+								<input class="radio radio-primary radio-open-fabspeeddial" type="radio" name="fab-state" value="open" />
+								Open
+							</label></div>
+							<div class="radio"><label>
+								<input class="radio radio-primary radio-close-fabspeeddial" type="radio" name="fab-state" value="closed" checked />
+								Closed
+							</label></div>
+						</div>
+						<div class="col-sm-4">
+							<h4>Animation Modes</h4>
+							<div class="radio"><label>
+								<input class="radio radio-primary radio-fling-fabspeeddial" type="radio" name="fab-animation" value="fling" checked />
+								Fling
+							</label></div>
+							<div class="radio"><label>
+								<input class="radio radio-primary radio-scale-fabspeeddial" type="radio" name="fab-animation" value="scale" />
+								Scale
+							</label></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp><div class="md-fab-speed-dial" data-toggle="speed-dial" data-mode="fling">
+<div class="md-fab-trigger" aria-expanded="false" aria-haspopup="true">
+<button type="button" class="btn btn-floating-action btn-info"><i class="material-icons">menu</i></button>
+</div>
+
+<ul class="md-fab-actions" aria-hidden="true">
+<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"data-toggle="tooltip" data-placement="left" title="Tooltip here"><i class="material-icons">3d_rotation</i></a></li>
+<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">attach_file</i></a></li>
+<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">backup</i></a></li>
+<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">brush</i></a></li>
+<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">pageview</i></a></li>
+<li><a href="#" class="btn btn-default-bright btn-floating-action btn-sm"><i class="material-icons">send</i></a></li>
+</ul>
+</div></xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+		"Checkbox",
+		"SpeedDial"
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		/**
+		 * Speed Dial Plugin
+		 */
+		$(".radio-up-fabspeeddial").on('ifChecked', function(event){
+			$("#demo-speed-dial").speedDial("direction","up");
+		});
+		$(".radio-down-fabspeeddial").on('ifChecked', function(event){
+			$("#demo-speed-dial").speedDial("direction","down");
+		});
+		$(".radio-left-fabspeeddial").on('ifChecked', function(event){
+			$("#demo-speed-dial").speedDial("direction","left");
+		});
+		$(".radio-right-fabspeeddial").on('ifChecked', function(event){
+			$("#demo-speed-dial").speedDial("direction","right");
+		});
+		$(".radio-open-fabspeeddial").on('ifChecked', function(event){
+			$("#demo-speed-dial").speedDial("open");
+		});
+		$(".radio-close-fabspeeddial").on('ifChecked', function(event){
+			$("#demo-speed-dial").speedDial("close");
+		});
+		$(".radio-fling-fabspeeddial").on('ifChecked', function(event){
+			$("#demo-speed-dial").speedDial("mode","fling");
+		});
+		$(".radio-scale-fabspeeddial").on('ifChecked', function(event){
+			$("#demo-speed-dial").speedDial("mode","scale");
+		});
+
+		/**
+		 * Clipboard
+		 */		
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

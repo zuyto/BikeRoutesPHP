@@ -1,0 +1,203 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Charts</li>
+		<li>SimplePieCharts</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			SimplePieCharts
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="alert alert-callout alert-info alert-exclusive">
+				 <span class="badge badge-default-dark"><i class="material-icons md-18">star</i></span>  Bemat Admin Exclusive Premium Plugin
+			</div>							
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Overview</h2>
+			<p>Create simple <code>&lt;svg&gt;</code> pie charts.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Examples:
+					</header>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-6 layout-column layout-align-center">
+							<div class="bemat-pie-chart" data-toggle="simple-pie-chart" data-percent="37" data-type="primary"></div>
+						</div>
+						<div class="col-lg-6 layout-column layout-align-center">
+							<div class="bemat-pie-chart-live-update" data-toggle="simple-pie-chart" data-percent="41" data-type="info"></div>
+						</div>
+					</div>									
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						HTML Code:
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body">
+					<pre><xmp><div class="bemat-pie-chart" data-toggle="simple-pie-chart" data-percent="37" data-type="primary"></div>
+<div class="bemat-pie-chart-live-update" data-toggle="simple-pie-chart" data-percent="41" data-type="info"></div>
+</xmp></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+		"SimplePieCharts"
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard, spcTimeout;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});	
+			e.clearSelection();
+		});
+		
+		
+		/**
+		 * Simple Pie Charts
+		 */
+		$(function($) {
+			setProgress(0);
+
+			function setProgress(){
+				var progress = rand(0,100);
+				if (progress > 100) {
+					progress = 1;
+				}
+
+				$(".bemat-pie-chart-live-update").simplePieChart("set",progress);
+				spcTimeout = setTimeout(function(){
+					setProgress();
+				},2000);
+			}
+		});
+		
+		
+		
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+
+		clearTimeout(spcTimeout); spcTimeout = void 0;
+	}
+</script>

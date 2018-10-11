@@ -1,0 +1,552 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Other Features</li>
+		<li>i18next</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			i18next
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<p class="lead">
+				i18next is a very popular internationalization framework for browser or any other javascript environment (eg. node.js).
+			</p>								
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="text-primary">Usage</h2>
+			<p>Bemat Admin now supports translating your webapplication by using i18next javascript library.</p>
+			<p>You can activate the i18n support on <span class="label label-primary">bemat-config.js</span> by setting the <code>$.appMultiLanguage</code> variable to <code>true</code>. This way Bemat will use a locale file placed on <code>locales</code> folder to translate your webapplication. Set the <code>$.appDefaultLanguage</code> to the name of the file that you want to use.</p>
+		</div>
+
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						English Language Locale File (en.json)
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-8">
+					<pre><xmp>{
+	"headerToolbar":{
+		"searchbox":"Search",
+		"languageSelector":"Language Selector",
+		"fullscreenToggle":"Toggle Fullscreen",
+		"userinfo":{
+			"profile":"Profile",
+			"settings":"Settings",
+			"lock":"Lock",
+			"logout":"Log Out"
+		}
+	},
+	"userinfo":{
+		"profile":"Profile",
+		"settings":"Settings",
+		"lock":"Lock",
+		"logout":"Log Out"
+	},
+	"nav": {
+		"general":{
+			"new":"New",
+			"soon":"Soon"
+		},
+		"dashboard": "Dashboard",
+		"components": {
+			"components":"Components",
+			"accordions":"Accordions",
+			"alerts":"Alerts",
+			"badges":"Badges & Labels",
+			"boxshadow":"Boxshadow",
+			"buttons":{
+				"buttons":"Buttons",
+				"buttonTypes":"Button Types",
+				"FABSpeedDial":"FAB Speed Dial",
+				"materialRipple":"Material Ink Ripple"
+			},
+			"breadcrumbs":"Breadcrumbs",
+			"colors":"Colors Material Design",
+			"dropdowns":"Dropdowns",
+			"grid":"Grid",
+			"icons":{
+				"icons":"Icons",
+				"material":"Material Design Icons",
+				"fontAwesome":"Font Awesome"
+			},
+			"lists":{
+				"lists":"Lists",
+				"normal":"Normal Lists",
+				"subheader":"Subheader Sticky"
+			},
+			"modals":"Modals",
+			"menu":"Multi Levels Side Menu",
+			"notifications":{
+				"notifications":"Notifications",
+				"snackbars":"Snackbars",
+				"toasts":"Toasts"
+			},
+			"pagination":{
+				"pagination":"Pagination",
+				"paginator":"Pagination",
+				"pager":"Pager"
+			},
+			"panels":"Panels",
+			"progressIndicators":{
+				"progressIndicators":"Progress Indicators",
+				"circular":"Circular",
+				"linear":"Linear",
+				"bootstrap":"Bootstrap Progressbar"
+			},
+			"tables":{
+				"tables":"Tables",
+				"static":"Static Tables",
+				"dynamic":"Dynamic Tables",
+				"responsive":"Responsive Tables"
+			},
+			"tabs":"Tabs",
+			"tooltips":"Tooltips",
+			"typography":"Typography"
+		},
+		"forms":{
+			"forms":"Forms",
+			"basic":"Basic Form Elements",
+			"editors":{
+				"editors":"Text Editors",
+				"editor1":"Summernote Editor",
+				"editor2":"CKEditor",
+				"editor3":"wysihtml5",
+				"editor4":"Markdown",
+				"editor5":"Simditor",
+				"editor6":"Trumbowyg",
+				"editor7":"MediumEditor"
+			},
+			"codeEditors":{
+				"editors":"Code Editors",
+				"editor1":"Ace",
+				"editor2":"CodeMirror"
+			},
+			"syntax":{
+				"editors":"Syntax Highlighter",
+				"editor1":"Google Prettify",
+				"editor2":"Prism",
+				"editor3":"Hightlight.js"
+			}
+		},
+		"charts":{
+			"charts":"Charts",
+			"chart1":"Sparklines",
+			"chart2":"Peity",
+			"chart3":"Simple Pie Chart",
+			"chart4":"Chartist.js",
+			"chart5":"NVD3",
+			"chart6":"Chart.js"
+		},
+		"other":{
+			"others":"Other Features",
+			"other1":"Favicon Notifications",
+			"other2":"Sweet Alert",
+			"other3":"Idle Timer",
+			"other4":"Hierarchical Display",
+			"other5":"CSS Animations",
+			"other6":"Google Maps",
+			"other7":"i18n Support",
+			"other8":"Clipboard"
+		},
+		"bac":{
+			"bematAdmin":"Bemat Admin",
+			"bac":"Bemat Admin Core",
+			"layouts":"App Layouts",
+			"skins":"App Skins",
+			"settings":"App Settings",
+			"variations":"App Variations"
+		},
+		"helpers":{
+			"helpers":"Helper Functions",
+			"classes":"Helper Classes",
+			"functions":"Helper Functions"
+		},
+		"premadePages":{
+			"premadePages":"Premade Pages & Apps",
+			"pages":"Pages",
+			"authentication":{
+				"authentication":"Authentication",
+				"forgotPassword":"Forgot Password",
+				"login":"Login",
+				"lock":"Lock Page",
+				"register":"Register"
+			},
+			"blank":"Blank Page",
+			"help":"Help & FAQ",
+			"invoice":"Invoice",
+			"maintenance":"Maintenance",
+			"pricingTables":"Pricing Tables",
+			"settings":"Settings",
+			"errors":{
+				"errors":"Errors",
+				"404":"Error 404",
+				"500":"Error 500"
+			}
+		},
+		"mailbox":{
+			"mailbox":"Mailbox",
+			"inbox":"Inbox",
+			"compose":"Compose",
+			"view":"View",
+			"templates":"Email Templates"
+		},
+		"calendar":"Calendar",
+		"multiLevelMenu":"Multi Level Menu"
+	},
+	"dashboard1":{
+		"dashboard":"Dashboard",
+		"welcomeMsg":"Welcome back {{username}}"
+	}
+}</xmp></pre>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-heading-xs">
+					<header>
+						Spanish Language Locale File (es.json)
+					</header>
+					<button class="btn btn-xs btn-primary btn-flat" data-copycode="true">Copy Code</button>
+				</div><!-- /.panel-heading -->
+				<div class="panel-body height-8">
+					<pre><xmp>{
+	"headerToolbar":{
+		"searchbox":"Buscar",
+		"languageSelector":"Selector de Idioma",
+		"fullscreenToggle":"Actibar Pantalla Completa",
+		"userinfo":{
+			"profile":"Perfil",
+			"settings":"Configuración",
+			"lock":"Bloquear Sesión",
+			"logout":"Cerrar Sesión"
+		}
+	},
+	"userinfo":{
+		"profile":"Perfil",
+		"settings":"Configuración",
+		"lock":"Bloquear Sesión",
+		"logout":"Cerrar Sesión"
+	},
+	"nav": {
+		"general":{
+			"new":"Nuevo",
+			"soon":"Pronto"
+		},
+		"dashboard": "Escritorio",
+		"components": {
+			"components":"Componentes",
+			"accordions":"Acordiones",
+			"alerts":"Alertas",
+			"badges":"Etiquetas",
+			"boxshadow":"Caja Sombreada",
+			"buttons":{
+				"buttons":"Botones",
+				"buttonTypes":"Tipos de Botones",
+				"FABSpeedDial":"FAB Speed Dial",
+				"materialRipple":"Efecto Onda de Tinta"
+			},
+			"breadcrumbs":"Barra de Rastro",
+			"colors":"Colores Material Design",
+			"dropdowns":"Menu Desplegable",
+			"grid":"Rejilla",
+			"icons":{
+				"icons":"Iconos",
+				"material":"Material Design Icons",
+				"fontAwesome":"Font Awesome"
+			},
+			"lists":{
+				"lists":"Listas",
+				"normal":"Lista Normal",
+				"subheader":"Lista Subheader Sticky"
+			},
+			"modals":"Ventana Modal",
+			"menu":"Multi Levels Side Menu",
+			"notifications":{
+				"notifications":"Notificaciones",
+				"snackbars":"Snackbars",
+				"toasts":"Toasts"
+			},
+			"pagination":{
+				"pagination":"Paginación",
+				"paginator":"Paginación",
+				"pager":"Paginador"
+			},
+			"panels":"Paneles",
+			"progressIndicators":{
+				"progressIndicators":"Indicadores de Progreso",
+				"circular":"Circular",
+				"linear":"Linear",
+				"bootstrap":"Bootstrap Progressbar"
+			},
+			"tables":{
+				"tables":"Tablas",
+				"static":"Tabla Estática",
+				"dynamic":"Tabla Dinámica",
+				"responsive":"Tabla Responsive"
+			},
+			"tabs":"Pestañas",
+			"tooltips":"Tooltips",
+			"typography":"Tipografía"
+		},
+		"forms":{
+			"forms":"Formularios",
+			"basic":"Elementos Básicos",
+			"editors":{
+				"editors":"Editores de Texto",
+				"editor1":"Summernote Editor",
+				"editor2":"CKEditor",
+				"editor3":"wysihtml5",
+				"editor4":"Markdown",
+				"editor5":"Simditor",
+				"editor6":"Trumbowyg",
+				"editor7":"MediumEditor"
+			},
+			"codeEditors":{
+				"editors":"Editores de Código",
+				"editor1":"Ace",
+				"editor2":"CodeMirror"
+			},
+			"syntax":{
+				"editors":"Syntax Highlighter",
+				"editor1":"Google Prettify",
+				"editor2":"Prism",
+				"editor3":"Hightlight.js"
+			}
+		},
+		"charts":{
+			"charts":"Gráficos",
+			"chart1":"Sparklines",
+			"chart2":"Peity",
+			"chart3":"Simple Pie Chart",
+			"chart4":"Chartist.js",
+			"chart5":"NVD3",
+			"chart6":"Chart.js"
+		},
+		"other":{
+			"others":"Otras Características",
+			"other1":"Favicon Notifications",
+			"other2":"Sweet Alert",
+			"other3":"Idle Timer",
+			"other4":"Hierarchical Display",
+			"other5":"CSS Animations",
+			"other6":"Google Maps",
+			"other7":"i18n Support",
+			"other8":"Clipboard"
+		},
+		"bac":{
+			"bematAdmin":"Bemat Admin",
+			"bac":"Bemat Admin Core",
+			"layouts":"App Layouts",
+			"skins":"App Skins",
+			"settings":"App Settings",
+			"variations":"App Variations"
+		},
+		"helpers":{
+			"helpers":"Funciones Auxiliares",
+			"classes":"Clases",
+			"functions":"Funciones"
+		},
+		"premadePages":{
+			"premadePages":"Páginas y Apps Prefabricadas",
+			"pages":"Páginas",
+			"authentication":{
+				"authentication":"Autenticación",
+				"forgotPassword":"Recuperar Contraseña",
+				"login":"Inicio de Sesión",
+				"lock":"Bloqueo",
+				"register":"Registro"
+			},
+			"blank":"Página en Blanco",
+			"help":"Ayuda y FAQ",
+			"invoice":"Factura",
+			"maintenance":"Mantención",
+			"pricingTables":"Tabla de Precios",
+			"settings":"Configuración",
+			"errors":{
+				"errors":"Errores",
+				"404":"Error 404",
+				"500":"Error 500"
+			}
+		},
+		"mailbox":{
+			"mailbox":"Mailbox",
+			"inbox":"Entrada",
+			"compose":"Componer",
+			"view":"Ver",
+			"templates":"Plantillas de Email"
+		},
+		"calendar":"Calendario",
+		"multiLevelMenu":"Menu Multi Nivel"
+	},
+	"dashboard1":{
+		"dashboard":"Escritorio",
+		"welcomeMsg":"Bienvenido nuevamente {{username}}"
+	}
+}</xmp></pre>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-lg-12">
+			<h2 class="text-primary">Translating Your WebApplication</h2>
+			<p>In order to translate your webapplication, you need to add some <code>data-i18n</code> html attributes the html elements that you want to translate. Here is a example used in the Bemat sidebar.</p>
+			<pre><xmp><a href="pages/dashboard.html">
+	<span class="menu-item-ico"><i class="material-icons">dashboard</i></span>
+	<span class="menu-item-name" data-i18n="nav.dashboard">Dashboard</span>
+</a></xmp></pre>
+			<p>Bemat will call automatically, after each new page load, the <code>AppLanguage.doLocale()</code> private function to apply the translation to the new active page.</p>
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+	
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+		"prettyPrint"
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	
+	// Set page variables globally
+	var clipboard;
+	
+	var doneScriptsLoad = function(){
+		clipboard = new Clipboard('[data-copycode="true"]',{
+			target: function(trigger) {
+				return trigger.parentNode.parentNode.getElementsByTagName("pre")[0];
+			}
+		});
+		
+		clipboard.on('success', function(e) {
+			$.toasts("add",{
+				msg: "Copied!",
+			});
+			e.clearSelection();
+		});
+		
+		
+		/**
+		 * SweetAlert
+		 */
+		$("#btntest-swalert1").on("click",function(){
+			swal("Hello world!");
+		});
+		$("#btntest-swalert2").on("click",function(){
+			swal("Oops...", "Something went wrong!", "error");
+		});
+		$("#btntest-swalert3").on("click",function(){
+			swal({
+				title: "An input!",
+				text: 'Write something interesting:',
+				type: 'input',
+				showCancelButton: true,
+				closeOnConfirm: false,
+				animation: "slide-from-top"
+			}, function(inputValue){
+				console.log("You wrote", inputValue);
+			});
+		});
+		
+		
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		clipboard.destroy(); clipboard = void 0;
+	}
+</script>

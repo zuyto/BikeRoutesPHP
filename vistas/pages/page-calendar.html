@@ -1,0 +1,341 @@
+<section class="page-header alternative-header">
+	<ol class="breadcrumb">
+		<li>Admin</li>
+		<li>Dashboard</li>
+		<li>Calendar</li>
+	</ol>
+	<div class="page-header_title">
+		<h1>
+			<i class="material-icons">event</i> Calendar
+			<span class="page-header_subtitle"></span>
+		</h1>
+	</div>
+</section>
+
+<section class="page-content no-padding-top">
+	<div class="row">
+		<div class="hidden-xs col-sm-3 col-lg-3">
+
+			<div class="margin-offset-top-8">
+				<div class="cta-btn">
+					<a href="#" class="btn btn-info btn-raised btn-block">Add New Event</a>
+				</div>
+				<div id="external-events">
+					<h4>Draggable Events</h4>
+					<div class="fc-event">Your Event 1</div>
+					<div class="fc-event">Your Event 2</div>
+					<div class="fc-event">Your Event 3</div>
+					<div class="fc-event">Your Event 4</div>
+					<div class="fc-event">Your Event 5</div>
+					<div class="fc-event">Your Event 6</div>
+					<div class="fc-event">Your Event 7</div>
+					<div class="fc-event">Your Event 8</div>
+					<div class="fc-event-remove margin-top-2">
+						<input class="checkbox checkbox-primary" type='checkbox' id='drop-remove' />
+						<label for='drop-remove'>remove after drop</label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-xs-12 col-sm-9 col-lg-9">
+
+			<div class="panel panel-default panel-heading-offset">
+				<div class="panel-body no-padding">
+					<div id="bemat-calendar"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</section><!-- /#page-content -->
+
+
+
+
+
+<script type="text/javascript">
+	/**
+	 * PUT BELOW HERE
+	 * ALL PAGE LEVEL RELATED SCRIPTS
+	 */
+
+
+
+	/**
+	 * 1. pageLoadScripts
+	 *
+	 * Scripts array to load on pageload event
+	 *
+	 * Example:
+	 *	var pageLoadScripts = [
+	 *		"js/bemat-demo-script1.min.js",
+	 *		"js/bemat-demo-script2.min.js"
+	 *  ]
+	 *
+	 */
+	var pageLoadScripts = [
+
+	]
+	
+	var pageLoadCSS = [
+
+	]
+	
+	
+	/**
+	 * 2. pageRequiredComponents
+	 *
+	 * Components that require this page. By default all components are loaded,
+	 * but with this array, you can force the reinitialization of any component.
+	 * 
+	 * Example:
+	 *	var pageRequiredComponents = [
+	 *		"Panel",
+	 *		"Checkbox",
+	 *		"Select",
+	 *		"Dropdown",
+	 *		"Tooltip",
+	 *		"Modals",
+	 *		"FloatingLabels",
+	 *		"Scrollbar",
+	 *		"MaterialRipple",
+	 *		"Snackbar",
+	 *		"Toast",
+	 *		"Subheader",
+	 *		"SimplePieCharts",
+	 *		"LinearProgress",
+	 *		"CircularProgress",
+	 *		"SpeedDial"
+	 *	]
+	 */	
+	var pageRequiredComponents = [
+		"Checkbox"
+	]
+	
+	
+	/**
+	 * 3. pageRequiredFeatures
+	 */
+	var pageRequiredFeatures = [
+	
+	]
+	
+
+	
+	/**
+	 * 4. doneScriptsLoad() 
+	 *
+	 * This function gets called when the "pageLoadScripts" 
+	 * and "pageRequiredComponents" arrays above are fully loaded
+	 */
+	 
+	var doneScriptsLoad = function(){
+		/**
+		 * Calendar - Add Events to the calendar
+		 */
+		$(function($){
+			$.calendar 		= $("#bemat-calendar");
+
+			var AppCalendar = {
+				init: function(){
+					var h 	 	= $(".page-header.alternative-header"),
+						overlay	= $('<div class="calendar-bg-overlay"></div>');
+
+					$.calendar.fullCalendar({
+						viewRender: function(element){
+							AppCalendar.update();
+						},
+						header: {
+							left: '',
+							center: 'prev, title, next',
+							right: 'today,month,basicWeek,basicDay'
+						},
+						editable: true,
+						eventLimit: true,
+						droppable: true,
+						drop: function() {
+							if ($("#drop-remove").is(":checked")) {
+								$(this).remove();
+							}
+						}
+					});
+
+					$("#external-events .fc-event").each(function() {
+						$(this).data('event', {
+							title: $.trim($(this).text()),
+							stick: true
+						});
+						$(this).draggable({
+							zIndex: 999,
+							revert: true,
+							revertDuration: 400
+						});
+					});	
+
+
+					h.append(overlay);
+					//AppCalendar.update();
+				},
+				update: function(){
+					var date 	= $.calendar.fullCalendar("getDate"),
+						month 	= date._i[1],
+						h 	 	= $(".page-header.alternative-header"),
+						path 	= "img/bgs/calendar/"+month+".jpg",
+						style 	= {
+							"background-image":"url("+path+")",
+							"background-size":"cover",
+							"background-position":"center"
+						};
+
+					if ($.calendar.data("month") != month) {
+						$.calendar.data("month",month);
+						var t = setTimeout(function(){
+							var h 	 	= $(".page-header.alternative-header"),
+								st1 	= {
+										"opacity":"1"
+									},
+								st2 	= {
+										"opacity":"0.4"
+									},
+								bg 		= $(".calendar-bg-overlay");
+
+							bg.animate(st1,"400",function(){
+								h.css(style);
+								bg.animate(st2,"400");
+							});
+						},0);
+					}
+				}
+			};
+
+			var events = [
+				{
+					title: 'All Day Event',
+					start: '2016-03-01'
+				},
+				{
+					title: 'Long Event',
+					start: '2016-03-07',
+					end: '2016-03-10'
+				},
+				{
+				id: 999,
+					title: 'Repeating Event',
+					start: '2016-03-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-03-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2016-03-11',
+					end: '2016-03-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-03-12T10:30:00',
+					end: '2016-03-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-03-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-03-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2016-03-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-03-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2016-03-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2016-03-28'
+				},
+				{
+					title: 'All Day Event',
+					start: '2016-04-01'
+				},
+				{
+					title: 'Long Event',
+					start: '2016-04-07',
+					end: '2016-04-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-04-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-04-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2016-04-11',
+					end: '2016-04-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-04-12T10:30:00',
+					end: '2016-04-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-04-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-04-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2016-04-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-04-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2016-04-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2016-04-28'
+				}
+			];
+			$("body").attr("id","page-calendar");
+			AppCalendar.init();
+			$.calendar.fullCalendar("addEventSource",events,true);
+		});
+		
+	} // END: doneScriptsLoad();
+	
+
+	/**
+	 * 4. pageDestroy()
+	 *
+	 * Destroy all generated instances
+	 */
+	var pageDestroy = function(){
+		$("body").removeAttr("id");
+		//$("#bemat-calendar").fullCalendar( 'destroy' );
+		$.calendar.fullCalendar("destroy");
+	}
+</script>
