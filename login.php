@@ -1,3 +1,7 @@
+<?php
+include('controlador/CLogin.php');
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -32,9 +36,15 @@
                                 </div>
                             </div>
                         </div>
-
+                        <?php
+                        if (isset($login)) {
+                            echo $login;
+                            unset($login);
+                        }
+                        ?>
                         <div class="authentication-body">
-                            <form class="form" role="form" action="controlador/controladorLogin.php" method="POST">
+
+                            <form class="form" role="form"  method="POST">
                                 <div class="form-group floating-label">
                                     <input type="text" class="form-control" id="regular2" name="usuario">
                                     <label for="regular2">Usuario</label>
@@ -43,8 +53,7 @@
                                     <input type="password" class="form-control" id="password" name="contrasena">
                                     <label for="password">Contraseña</label>
                                 </div>
-
-                                <button type="submit" class="btn btn-info btn-raised btn-block">Iniciar Sesión</button>
+                                <input id='login' type="submit" class="btn btn-info btn-raised btn-block" value='Iniciar Sesión' name='login'/>
                                 <div class="authentication-body-footer margin-top-5">
 
                                     <div class="text-right">
