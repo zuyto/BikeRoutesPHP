@@ -38,7 +38,7 @@ $.ajaxNavMaterialTransition = false;
  * Default Language
  */
 $.appMultiLanguage		= true;
-$.appDefaultLanguage 	= "en";
+$.appDefaultLanguage 	= "es";
 
 
 /**
