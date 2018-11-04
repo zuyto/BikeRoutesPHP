@@ -1,0 +1,9 @@
+#F44336  ROJO
+#f88e86  ROJO CLARO
+#fff  BLANCO
+#1E8B0F verde claro
+
+
+GEOLOCALISACION
+https://www.youtube.com/watch?v=c35r-vnrMr4
+
